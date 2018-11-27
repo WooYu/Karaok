@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_cantata"
+    android:fitsSystemWindows="true"
+    tools:context="com.clicktech.snsktv.module_home.ui.activity.CantataActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--标题-->
+        <com.clicktech.snsktv.widget.titlebar.HeaderView
+            android:id="@+id/headerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_medium"
+            app:titleAlpha="0"
+            app:titleLeftImg="@mipmap/arrow_left"
+            app:titleName="@string/cantata_title" />
+
+        <!--已录制时长、歌曲时长-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/gapsize_f"
+            android:paddingLeft="@dimen/gapsize_d"
+            android:paddingRight="@dimen/gapsize_d"
+            android:paddingTop="@dimen/gapsize_b">
+            <!--已录制时长-->
+            <TextView
+                android:id="@+id/tv_curtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ksong_time_initial"
+                android:textColor="@color/gainsboro"
+                android:textSize="@dimen/typesize_d" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="27px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/gapsize_f"
+                android:layout_marginRight="@dimen/gapsize_f"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/layer_progress_red" />
+
+            <TextView
+                android:id="@+id/tv_totaltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ksong_time_initial"
+                android:textColor="@color/gainsboro"
+                android:textSize="@dimen/typesize_d" />
+        </LinearLayout>
+
+        <!--录制中-->
+        <RelativeLayout
+            android:id="@+id/rl_cantata_status"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/cantata_triangle" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/cantata_ripple" />
+
+            <TextView
+                android:id="@+id/tv_recordtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/ksong_time_initial"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_a" />
+
+            <TextView
+                android:id="@+id/tv_playstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_recordtime"
+                android:layout_centerInParent="true"
+                android:text="@string/cantata_pause"
+                android:textColor="@color/whitesmoke"
+                android:textSize="@dimen/typesize_d" />
+
+
+        </RelativeLayout>
+
+        <!--暂停、追加视频、重录、录制完成-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/gapsize_d">
+
+            <!--播放、暂停-->
+            <TextView
+                android:id="@+id/tv_mppaused"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/gapsize_f"
+                android:drawableTop="@mipmap/ksong_switchmode"
+                android:gravity="center"
+                android:text="@string/cantata_pause"
+                android:textColor="@color/white" />
+
+            <!--升降调-->
+            <TextView
+                android:id="@+id/tv_tone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/gapsize_f"
+                android:drawableTop="@mipmap/ksong_tone"
+                android:gravity="center"
+                android:text="@string/ksong_tone"
+                android:textColor="@color/white" />
+
+            <!--重录-->
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/gapsize_f"
+                android:drawableTop="@mipmap/ksong_remake"
+                android:gravity="center"
+                android:text="@string/cantata_reset"
+                android:textColor="@color/white" />
+
+            <!--结束-->
+            <TextView
+                android:id="@+id/tv_over"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/gapsize_f"
+                android:drawableTop="@mipmap/ksong_over"
+                android:gravity="center"
+                android:text="@string/cantata_finish"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--倒计时-->
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/cantata_countdown"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

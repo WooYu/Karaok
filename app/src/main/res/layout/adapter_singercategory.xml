@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/singerselect_view_h_b"
+        android:layout_marginBottom="@dimen/singerselect_view_h_g"
+        android:layout_marginLeft="@dimen/singerselect_view_h"
+        android:layout_marginRight="@dimen/singerselect_view_h"
+        android:layout_marginTop="@dimen/singerselect_view_h_g"
+        android:background="@drawable/shape_singerselect">
+
+        <TextView
+            android:id="@+id/item_tv_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/singerselect_view_h_c"
+            android:textColor="@color/text_medium"
+            android:textSize="@dimen/typesize_c"
+            tools:text="王心灵" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/singerselect_view_h_f"
+            android:background="@mipmap/home_singer_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

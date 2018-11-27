@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_d">
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30px"
+            android:background="@mipmap/nation_golde_medal"
+            android:textColor="@color/text_light" />
+
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/avatar"
+            android:layout_width="116px"
+            android:layout_height="120px"
+            android:layout_marginRight="28px"
+            android:src="@mipmap/def_avatar_round"
+            app:mlborder_width="0dp"
+            app:shape_type="round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="芜湖奶茶"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_c" />
+
+            <TextView
+                android:id="@+id/contribution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_f"
+                android:text="贡献1000K币+99鲜花"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_e" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+</LinearLayout>

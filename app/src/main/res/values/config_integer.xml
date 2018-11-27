@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--works_type	是	int	类型：0普通K歌; 1合唱第一人唱A; 2合唱第一人唱B; 3合唱第二人; 4清唱K歌-->
+    <integer name="workstype_common">0</integer>
+    <integer name="workstype_chrousa">1</integer>
+    <integer name="workstype_chrousb">2</integer>
+    <integer name="workstype_chrousother">3</integer>
+    <integer name="workstype_cantata">4</integer>
+    <!--is_publish	是	int	0所有1私密 2发布-->
+    <integer name="ispublish_local">0</integer>
+    <integer name="ispublish_secret">1</integer>
+    <integer name="ispublish_open">2</integer>
+    <!--chorus_type	是	int	1独占，2左右屏，3大小屏-->
+    <integer name="chorustype_fullscreen">1</integer>
+    <integer name="chorustype_leftright">2</integer>
+    <integer name="chorustype_frontback">3</integer>
+    <!--allow_chorus 是否支持合唱 0不支持 1支持 2推荐合唱-->
+    <integer name="allowchorus_nonsupport">0</integer>
+    <integer name="allowchorus_support">1</integer>
+    <!--is_practice 	可以为空，为1时是练唱-->
+    <integer name="ispractice">1</integer>
+    <!--attentionType 是否关注过用户-->
+    <integer name="attentiontype_no">0</integer>
+    <!--attentionTypeWorks 是否关注过作品-->
+    <integer name="attentiontypeworks_no">0</integer>
+    <integer name="attentiontypeworks_yes">1</integer>
+    <!--收藏的作品类型 int  0: 歌曲 1：专辑-->
+    <integer name="collectworkstype_sing">0</integer>
+    <integer name="collectworkstype_album">1</integer>
+    <!--用户 性别 0女 1男-->
+    <integer name="sex_man">1</integer>
+    <integer name="sex_female">0</integer>
+    <!--语言 1日文 2中文 3英文-->
+    <integer name="languagecode_jp">1</integer>
+    <integer name="languagecode_cn">2</integer>
+    <integer name="languagecode_en">3</integer>
+    <!--type	是	String	1收听榜，2人气榜，（未添加 3评委榜，4合唱推荐）-->
+    <integer name="ranktype_listen">1</integer>
+    <integer name="ranktype_popular">2</integer>
+    <integer name="ranktype_comment">3</integer>
+    <integer name="ranktype_chorus">4</integer>
+    <!--type	是	轮播图位置标识	不传或者0表示取首页:位置 0:首页 1：发现 2:主题页面 3:财富 4全国 5好友 6试听-->
+    <integer name="wheeltype_home">0</integer>
+    <integer name="wheeltype_discover">1</integer>
+    <integer name="wheeltype_theme">2</integer>
+    <integer name="wheeltype_rich">3</integer>
+    <integer name="wheeltype_nation">4</integer>
+    <integer name="wheeltype_friend">5</integer>
+    <integer name="wheeltype_audition">6</integer>
+    <!--type	N	String	0全部 1常用 2年代 3主题-->
+    <integer name="songcategorytype_all">0</integer>
+    <integer name="songcategorytype_common">1</integer>
+    <integer name="songcategorytype_time">2</integer>
+    <integer name="songcategorytype_theme">3</integer>
+    <!--msgType 消息类型-->
+    <!--1 -系统消息-->
+    <integer name="msgtype_system">1</integer>
+    <!--2-别人关注了我-->
+    <integer name="msgtype_someonewatchme">2</integer>
+    <!--3-我关注的人发布了作品-->
+    <integer name="msgtype_publish_concerned">3</integer>
+    <!--4-今天登录赠送了您新的鲜花和K币-->
+    <integer name="msgtype_dailywelfare">4</integer>
+    <!--5-专辑收到礼物(未关注)(/gift/app/gift/sendingAlbumGifts)-->
+    <integer name="msgtype_albumgift_notfollowed">5</integer>
+    <!-- 6-作品收到礼物(未关注)(/gift/app/gift/sendingGifts)-->
+    <integer name="msgtype_workgift_notfollowed">6</integer>
+    <!--7-作品被评论(未关注)(/works/app/works/saveWorksComment)-->
+    <integer name="msgtype_workcomment_notfollowed">7</integer>
+    <!--8-专辑被评论(未关注)(/works/app/works/saveAlbumComment)-->
+    <integer name="msgtype_albumcomment_notfollowed">8</integer>
+    <!--15-专辑收到礼物(已关注)(/gift/app/gift/sendingAlbumGifts)-->
+    <integer name="msgtype_albumgift_followed">15</integer>
+    <!--16-作品收到礼物(已关注)(/gift/app/gift/sendingGifts)-->
+    <integer name="msgtype_workgift_followed">16</integer>
+    <!-- 17-作品被评论(已关注)(/works/app/works/saveWorksComment)-->
+    <integer name="msgtype_workcomment_followed">17</integer>
+    <!--18-专辑被评论(已关注)(/works/app/works/saveAlbumComment)-->
+    <integer name="msgtype_albumcomment_followed">18</integer>
+
+    <!--分页参数-->
+    <integer name="paging_size">100</integer>
+    <integer name="paging_startindex">1</integer>
+
+    <!--默认的录歌时长-->
+    <integer name="singtime">15</integer>
+    <integer name="ksingwithmv_lowerlimit">30</integer>
+    <integer name="cantata_lowerlimit">30</integer>
+    <integer name="cantata_upperlimit">240</integer>
+
+    <!--制作专辑：单曲数量限制-->
+    <integer name="single_lowerlimit">5</integer>
+    <integer name="single_upperlimit">10</integer>
+
+    <!--清唱倒计时-->
+    <integer name="cantata_countdown">5</integer>
+
+    <!--出生年月限制-->
+    <integer name="birth_limits">150</integer>
+
+    <!--状态栏透明度-->
+    <integer name="statusalpha_a">204</integer>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleGravity="center"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/find_friendrank" />
+
+    <include layout="@layout/layout_head_frendrank" />
+
+    <!--排行榜-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_singerfriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

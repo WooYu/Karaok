@@ -1,0 +1,578 @@
+<resources>
+    <string name="app_name">Karaok!</string>
+
+    <!--************************欢迎、登录、注册****************************-->
+    <!--欢迎-->
+    <string name="enter_welcome">立即体验</string>
+
+    <!--登录-->
+    <string name="enter_slogan_1">登录</string>
+    <string name="enter_slogan_2">Karaok</string>
+    <string name="enter_slogan_3">!</string>
+    <string name="enter_slogan_4">唱出你的精彩</string>
+    <string name="enter_or">或</string>
+    <string name="enter_otherlogin">更多登录方式</string>
+    <string name="enter_protocoltip">·继续代表您同意《<u>Karaok!用户协议</u>》</string>
+    <string name="enter_protocol">用户协议</string>
+
+    <!--注册-->
+    <string name="enter_regist_info">信息录入</string>
+    <string name="enter_regist_info_upavater">更换头像</string>
+    <string name="enter_regist_info_unick">昵称</string>
+    <string name="enter_regist_info_unick_hint">请输入昵称</string>
+    <string name="enter_regist_info_birthday_hint">请选择出生年月</string>
+    <string name="enter_regist_info_address_hint">请选择地域</string>
+    <string name="enter_regist_info_submit">输入确认</string>
+    <string name="enter_nation_cn">中国</string>
+    <string name="enter_nation_jp">日本</string>
+
+    <!--语言-->
+    <string name="language_title">选择语言</string>
+    <string name="language_cn">简体中文</string>
+    <string name="language_en">英语</string>
+    <string name="language_jp">日本语</string>
+
+    <!--**********************主界面****************************************-->
+    <string name="main_discover">发现</string>
+
+    <!--***********************首页******************************************-->
+    <!--K2（音乐馆）-->
+    <string name="hall_classfiy">曲名选曲</string>
+    <string name="hall_years_ago">年代</string>
+    <string name="hall_theme">主题</string>
+    <string name="hall_chorus">合唱</string>
+    <string name="hall_live">直播</string>
+    <string name="hall_hotrecom">热榜推荐</string>
+    <string name="hall_guessyoulike">猜你喜欢</string>
+    <string name="hall_newstart">新歌首发</string>
+    <string name="hall_comment">评分</string>
+    <string name="hall_kge">K歌</string>
+    <string name="hall_erasure">消音</string>
+
+    <!--搜索-->
+    <string name="search_titlename">搜索</string>
+    <string name="search_refer_hint">搜索歌曲/歌手</string>
+    <string name="search_refer_common_singer">常用歌手</string>
+    <string name="search_refer_empty">清空搜索历史</string>
+    <string name="search_result_sorry">抱歉！</string>
+    <string name="search_result_none">没有找到相关的结果...</string>
+    <string name="search_result_cappella">找不到想要的伴奏？</string>
+    <string name="search_result_feekback">我要反馈</string>
+    <string name="search_result_original">原版伴奏</string>
+    <string name="search_result_loadmore">加载更多</string>
+    <string name="search_result_original_end">所有原版伴奏加载完毕</string>
+    <string name="search_result_erasure">消音伴奏</string>
+    <string name="search_result_frominternet">以下内容来自互联网</string>
+
+    <!--横幅-->
+    <string name="banner_special">往期专题推荐</string>
+
+    <!--歌手选曲-->
+    <string name="singer_selecsongs">歌手选曲</string>
+    <string name="singer_havesome_singer">已点歌手</string>
+    <string name="singer_all">全部歌手</string>
+    <string name="singer_popularchorus">人气合唱</string>
+    <string name="singer_music_all">全部歌曲</string>
+    <string name="singer_type">歌手类型</string>
+    <string name="singer_out">海外歌手</string>
+
+    <!--分类-->
+    <string name="category_all">分类</string>
+    <string name="category_history">历史记录</string>
+
+    <!--年代-->
+    <string name="year_between_yearbedin">开始年代</string>
+    <string name="year_between_yearend">结束年代</string>
+    <string name="year_between_yearbt">年代检索</string>
+    <string name="year_between_year_beg_hint">请选择开始年代</string>
+    <string name="year_between_year_end_hint">请选择结束年代</string>
+
+    <!--已点-->
+    <string name="ever_accompaniment">已点伴奏</string>
+    <string name="ever_practicing">练唱列表</string>
+
+    <!--清唱-->
+    <string name="cantata_title">清唱</string>
+    <string name="cantata_recording">录制中</string>
+    <string name="cantata_play">播放</string>
+    <string name="cantata_pause">暂停</string>
+    <string name="cantata_reset">重录</string>
+    <string name="cantata_finish">完成</string>
+    <string name="cantata_editsongname_hint">清唱歌曲名字</string>
+
+    <!--合唱列表-->
+    <string name="chorus_recommend">合唱推荐</string>
+    <string name="chorus_star">明星合唱</string>
+    <string name="chorus_join">加入合唱</string>
+    <string name="chorus_participantlist">合唱参与列表</string>
+
+    <!--学唱主页-->
+    <string name="learnsing_songword">歌词</string>
+    <string name="learnsing_practic">练唱</string>
+    <string name="learnsing_mv">MV</string>
+    <string name="learnsing_sing">歌唱</string>
+    <string name="learnsing_chorus">合唱</string>
+    <string name="learnsing_video_chorus">视频合唱</string>
+    <string name="learnsing_grade_none">暂无评分，去寻找好声音吧></string>
+    <string name="learnsing_friendrank">好友排行</string>
+    <string name="learnsing_nationrank">全国排行</string>
+    <string name="learnsing_friends_champion">好友擂主</string>
+
+    <!--K歌界面-->
+    <string name="ksong">K歌</string>
+    <string name="ksong_pause">暂停</string>
+    <string name="ksong_play">播放</string>
+    <string name="ksong_original">原唱</string>
+    <string name="ksong_tone">升降调</string>
+    <string name="ksong_midvoice">音量</string>
+    <string name="ksong_reset">重录</string>
+    <string name="ksong_over">结束</string>
+    <string name="ksong_time_initial">00:00</string>
+    <string name="ksong_switchmode">切换模式</string>
+
+    <!--待发布界面-->
+    <string name="tobeanno_titlename">保存设定</string>
+    <string name="tobeanno_voice">音量调节</string>
+    <string name="tobeanno_voicevol">人声音量</string>
+    <string name="tobeanno_accvol">演奏音量</string>
+    <string name="tobeanno_reverb">混响音效</string>
+    <string name="tobeanno_reverb_recordroom">录音棚</string>
+    <string name="tobeanno_reverb_ktv">KTV</string>
+    <string name="tobeanno_reverb_warmth">温暖</string>
+    <string name="tobeanno_reverb_magnetism">磁性</string>
+    <string name="tobeanno_reverb_clear">空灵</string>
+    <string name="tobeanno_reverb_distant">悠远</string>
+    <string name="tobeanno_reverb_3d">3D迷幻</string>
+    <string name="tobeanno_reverb_oldrecord">老唱片</string>
+    <string name="tobeanno_inflexion">变声</string>
+    <string name="tobeanno_inflexion_original">原声</string>
+    <string name="tobeanno_inflexion_emusic">电音</string>
+    <string name="tobeanno_inflexion_croaking">蛙声</string>
+    <string name="tobeanno_inflexion_male">男声</string>
+    <string name="tobeanno_inflexion_female">女声</string>
+    <string name="tobeanno_remake">重录</string>
+    <string name="tobeanno_addavideo">添加视频</string>
+    <string name="tobeanno_announce">发布</string>
+    <string name="tobeanno_save">保存</string>
+    <string name="tobeanno_voicemove">人声移动</string>
+
+    <!--打分结果-->
+    <string name="score_synthetical">综合得分</string>
+    <string name="score_synthetical_unit">分</string>
+    <string name="score_tone">音准</string>
+    <string name="score_accuracy">正确性</string>
+    <string name="score_stability">稳定性</string>
+    <string name="score_stability_left">抖动</string>
+    <string name="score_stability_right">平稳</string>
+    <string name="score_rhythm">节奏</string>
+    <string name="score_rhythm_left">快</string>
+    <string name="score_rhythm_right">慢</string>
+    <string name="score_longsound_trill">长音和颤音</string>
+    <string name="score_longsound">长音</string>
+    <string name="score_trill">颤音</string>
+    <string name="score_expression">表现力</string>
+
+    <!--发布-->
+    <string name="announce">发布</string>
+    <string name="announce_finish">完成</string>
+    <string name="announce_change">更换</string>
+    <string name="announce_changetip">点击背景可修改歌曲详情页幻灯片</string>
+    <string name="announce_leaveaword_hint">我刚唱了一首歌曲，快来听听吧</string>
+    <string name="announce_dvd">加入专辑</string>
+    <string name="announce_secrettoupload">秘密上传</string>
+    <string name="announce_secrettoupload_hint">仅自己可见，可分享到QQ、微信、\n微博让好友欣赏</string>
+    <string name="announce_share">同步到</string>
+    <string name="announce_photoalbum">相册</string>
+    <string name="announce_camera">拍照</string>
+    <string name="announce_cancel">取消</string>
+    <string name="announce_worksnorelease">作品未发布，确定要退出吗？</string>
+    <string name="announce_quit">退出</string>
+
+    <!--**************************************我的****************************-->
+    <string name="mine_production">作品</string>
+    <string name="mine_fans">粉丝</string>
+    <string name="mine_attention">关注</string>
+    <string name="mine_give">送礼</string>
+    <string name="mine_comment">评论</string>
+    <string name="mine_transmit">转发</string>
+    <string name="mine_needlogin">未登录</string>
+    <string name="mine_attention_btn">关注</string>
+    <string name="mine_hot_btn">热门</string>
+    <string name="mine_item_attention_btn">+ 关注</string>
+    <string name="mine_attent_cancel">取消</string>
+    <string name="mine_playlist_inorder">顺序播放</string>
+    <string name="mine_playlist_close">关闭</string>
+
+    <string name="mine_attention_ok">已关注</string>
+    <string name="mine_attention_no">未关注</string>
+    <string name="mine_workslist_title">我的作品</string>
+    <string name="mine_attentiondialog_cancle">确定取消关注？</string>
+    <string name="mine_attentiondialog_add">确定添加关注？</string>
+
+    <string name="mine_mytracks_title">我的足迹</string>
+    <string name="mine_mytracks_history_singed">已点伴奏</string>
+    <string name="mine_mytracks_local_play">本地录音</string>
+    <string name="mine_mytracks_my_chorusplay">我的合唱</string>
+    <string name="mine_mytracks_chorusplayeduser">合唱参与列表</string>
+    <string name="mine_mytracks_listen_history">播放历史</string>
+    <string name="mine_mytracks_my_collection">我的收藏</string>
+
+    <string name="mine_mychroussongs">我的伴奏</string>
+    <string name="mine_mychroussongs_item_canyu">参与列表</string>
+    <string name="mine_myhistorysounds_ok">已点伴奏</string>
+    <string name="mine_myhistorysounds_learn">练唱列表</string>
+
+    <string name="mine_attention_need_login_text">登录去关注更多歌友吧</string>
+
+    <!--消息-->
+    <string name="news_titlename">通知</string>
+    <string name="news_letter">私信</string>
+    <string name="news_audience">最近听众</string>
+    <string name="news_gift">礼物消息</string>
+    <string name="news_sysmsg">系统消息</string>
+    <string name="news_comment_attention">已关注人评论</string>
+    <string name="news_comment_disconcern">未关注人评论</string>
+    <string name="news_comment_reply">回复</string>
+    <string name="news_exchangeflowers">兑换鲜花</string>
+    <string name="listener_visithome">访问主页</string>
+    <string name="listener_visitwork">收听作品</string>
+
+
+    <!--设置-->
+    <string name="setting_titlename">设置</string>
+    <string name="setting_datum">个人资料</string>
+    <string name="setting_accredit">授权</string>
+    <string name="setting_unauthorized">未授权</string>
+    <string name="setting_authorized">已授权</string>
+    <string name="setting_add_friend">加好友</string>
+    <string name="setting_findfriends">查找朋友</string>
+    <string name="setting_datum_edit">编辑资料</string>
+    <string name="setting_datum_finish">完成</string>
+    <string name="setting_datum_album">相册</string>
+    <string name="setting_datum_nick">昵称</string>
+    <string name="setting_datum_sex">性别</string>
+    <string name="setting_datum_sex_man">男</string>
+    <string name="setting_datum_sex_female">女</string>
+    <string name="setting_datum_birthday">生日</string>
+    <string name="setting_datum_sns">登录方式</string>
+    <string name="setting_datum_id">ID</string>
+    <string name="setting_datum_language">选择语言</string>
+    <string name="setting_datum_area">地区</string>
+    <string name="setting_inform">通知推送消息</string>
+    <string name="setting_inform_switch">接受消息</string>
+    <string name="setting_inform_switch_all">接受所有消息</string>
+    <string name="setting_inform_switch_friend">仅接受好友消息</string>
+    <string name="setting_inform_switch_none">不接受任何消息</string>
+    <string name="setting_inform_warmingtone">提示音</string>
+    <string name="setting_inform_vibra">震动提示</string>
+    <string name="setting_network_tip">网络提醒</string>
+    <string name="setting_network_nowifi">非wifi环境消耗流量提醒</string>
+    <string name="setting_network_every">每次</string>
+    <string name="setting_network_switching">切换时</string>
+    <string name="setting_network_noprompt">不提醒</string>
+    <string name="setting_other">其它</string>
+    <string name="setting_other_leadsinger">申请成为认证主唱</string>
+    <string name="setting_other_wipecache">清除缓存</string>
+    <string name="setting_wipecache_accompany">伴奏文件</string>
+    <string name="setting_wipecache_recording">本地录音</string>
+    <string name="setting_wipecache_workcache">收听和发布作品缓存</string>
+    <string name="setting_wipecache_delet">删除</string>
+    <string name="setting_other_feedback">意见反馈</string>
+    <string name="setting_feekback_uploadimg">上传截图</string>
+    <string name="setting_feekback_tip">请留下您宝贵的意见，帮助我们不断进步，更好为您服务！</string>
+    <string name="setting_feedback_commit">提交</string>
+    <string name="setting_feedback_hint">在这里写吧！</string>
+    <string name="setting_other_update">检查更新</string>
+    <string name="setting_ohter_about">关于我们</string>
+    <string name="setting_about_grade">去评分</string>
+    <string name="setting_about_function">功能介绍</string>
+    <string name="setting_quit">退出当前账号</string>
+
+    <!--举报-->
+    <string name="inform_title">举报</string>
+    <string name="inform_type">举报类型</string>
+    <string name="inform_harass">骚扰</string>
+    <string name="inform_advert">广告</string>
+    <string name="inform_swindle">诈骗</string>
+    <string name="inform_sexy">色情</string>
+    <string name="inform_violence">暴力</string>
+    <string name="inform_reaction">反动</string>
+    <string name="inform_stolensong">盗歌</string>
+    <string name="inform_pyramidsale">传销</string>
+    <string name="inform_other">其他</string>
+    <string name="inform_screentshot">举报内容截图</string>
+    <string name="inform_caption">+ 添加图片说明</string>
+    <string name="inform_reportdesc">举报描述(100字内)</string>
+    <string name="inform_reportdesc_hint">举报描述</string>
+    <string name="inform_sure">确定</string>
+
+    <!--K币-->
+    <string name="kcoin_title">K币账户</string>
+    <string name="kcoin_buy">购买</string>
+
+    <!--******************************发现******************************************-->
+    <string name="find_national_rank">全国</string>
+    <string name="find_rank">排行榜</string>
+    <string name="find_listener_rank">试听排行榜</string>
+    <string name="find_hot_singer">人气歌手</string>
+    <string name="find_hot_songs">人气歌曲</string>
+    <string name="find_moreclick">CHECK! ></string>
+    <string name="find_richlist">财富榜</string>
+    <string name="find_richlis">财富</string>
+    <string name="find_friendrank">K歌好友榜</string>
+    <string name="find_friend">好友</string>
+    <string name="find_friendrank_week_playcount">周作品播放总量：</string>
+    <string name="find_friendrank_week0">本周</string>
+    <string name="find_friendrank_week1">上周</string>
+    <string name="find_friendrank_week2">2周前</string>
+    <string name="find_friendrank_week3">3周前</string>
+    <string name="find_friendrank_week4">一个月前</string>
+
+    <string name="find_all">全部</string>
+    <string name="find_share">分享</string>
+    <string name="find_changecity">切换城市</string>
+    <string name="find_selectcountry">选择国家</string>
+    <string name="find_searchcity">搜索城市</string>
+    <string name="find_curcity">当前城市</string>
+    <string name="find_allcity">全部城市</string>
+    <string name="find_national">全国榜</string>
+    <string name="find_national_rule">按照一小时内人气增长量排名</string>
+    <string name="find_richlist_rule">按消费K币数量排名</string>
+    <string name="find_rich_newjinbang">新晋榜</string>
+    <string name="find_rich_daylist">日榜</string>
+    <string name="find_rich_totallist">总榜</string>
+
+    <!--城市定位-->
+    <string name="cp_changecity_title">切换城市</string>
+    <string name="cp_search_hint">请输入城市名</string>
+    <string name="cp_searchresult_none">没有搜索结果~</string>
+    <string name="cp_hot_city">热门城市</string>
+    <string name="cp_located_city">定位城市</string>
+    <string name="cp_locating">正在定位…</string>
+    <string name="cp_located_failed">定位失败</string>
+
+    <!--歌手介绍-->
+    <string name="singerintro_chorus">合唱</string>
+    <string name="singerintro_special">专辑</string>
+    <string name="singerintro_album">相册管理</string>
+    <string name="singerintro_edit">编辑</string>
+    <string name="singerintro_noworks">他还没有任何作品！</string>
+    <string name="singerintro_nosingle">有作品的人都是有才艺的人！</string>
+
+    <!--专辑-->
+    <string name="album_make">制作专辑</string>
+    <string name="album_desc_hint">我发布了一张新专辑，听听吧~</string>
+    <string name="album_songs">专辑歌曲</string>
+    <string name="album_songs_limit">(最小5首,最多10首)</string>
+    <string name="album_addsong">添加作品</string>
+    <string name="album_issue">发布</string>
+    <string name="album_single">单曲</string>
+    <string name="album_playall">播放全部</string>
+    <string name="album_giftrank">礼物榜</string>
+    <string name="album_nogifts">抢沙发的机会只有一次，你还等什么？</string>
+    <string name="album_comment">评论</string>
+    <string name="album_addsingle">添加歌曲</string>
+
+    <!--收藏-->
+    <string name="enshrine_nodata">您还没有收藏作品，去听听大家的吧!</string>
+
+    <!--歌曲详情-->
+    <string name="songdetail_comment">评论</string>
+    <string name="songdetail_share">分享</string>
+    <string name="songdetail_join">加入</string>
+    <string name="songdetail_collect">收藏</string>
+    <string name="songdetail_gifts">送礼</string>
+    <string name="songdetail_songrank">歌曲排行榜</string>
+    <string name="songdetail_commentlist">评论列表</string>
+    <string name="songdetail_more"><![CDATA[更多>]]></string>
+    <string name="songdetail_inputcomment_hint">请输入评论内容</string>
+
+    <!--礼物-->
+    <string name="gift_ranktitle">礼物榜</string>
+    <string name="gift_none">没有送出任何礼物</string>
+    <string name="gift_givegifts">去送礼</string>
+    <string name="gift">礼物</string>
+    <string name="gift_num_hint">输入赠送数量</string>
+    <string name="gift_sendgift">送礼物</string>
+
+    <!--合唱:选择角色-->
+    <string name="selectrole">选择角色</string>
+    <string name="selectrole_chorustip_blue">你需要演唱蓝色部分以及合唱部分</string>
+    <string name="selectrole_chorustip_red">你需要演唱红色部分以及合唱部分</string>
+    <string name="selectrole_startchorus">开始合唱</string>
+    <string name="selectrole_chorusred">唱红色部分</string>
+    <string name="selectrole_chorusblue">唱蓝色部分</string>
+
+    <!--合唱：录制MV预览-->
+    <string name="mvpreview">动画设定</string>
+    <string name="mvpreview_template">模板</string>
+    <string name="mvpreview_template1">标准</string>
+    <string name="mvpreview_template2">独占</string>
+    <string name="mvpreview_template3">前后</string>
+    <string name="mvpreview_filter">滤镜</string>
+    <string name="mvpreview_filter1">原创</string>
+    <string name="mvpreview_filter2">奶油</string>
+    <string name="mvpreview_filter3">月光</string>
+    <string name="mvpreview_filter4">莫斯科</string>
+    <string name="mvpreview_filter5">云雀</string>
+    <string name="mvpreview_filter6">美肌</string>
+    <string name="mvpreview_filter7">抹茶</string>
+    <string name="mvpreview_filter8">奈良</string>
+    <string name="mvpreview_startrecord">开始录制</string>
+    <string name="mvpreview_filter_name">美肤效果</string>
+
+    <!--**********************选择图片****************************************-->
+    <string name="title_choosepic_hint">请选择图片</string>
+
+    <!--******************************发现页面*******************************-->
+    <string name="popu_singer">人气歌手</string>
+    <string name="popu_song">人气歌曲</string>
+
+
+    <!--****************************StringFormat************************************-->
+    <string name="format_photonum">%s张</string>
+    <string name="format_unitofsinglenum">%s首</string>
+    <string name="format_listencount">%1$s收听</string>
+    <string name="format_commentcount">%1$s评论</string>
+    <string name="format_class">Lv%d</string>
+    <string name="format_numofimagesselected">已选择%d张图片</string>
+    <string name="format_giftsstatistics">送了%1$d朵鲜花%2$dK币</string>
+    <string name="format_chorusnumber">合唱过%s次</string>
+    <string name="format_album_comment">评论%s</string>
+    <string name="format_album_gift">礼物%s</string>
+    <string name="format_listeningtimesoftoday">今日收听次数：%s</string>
+    <string name="format_listeningtimesoftotal">累计收听次数：%s</string>
+    <string name="format_exchangeable_flowers">可兑换鲜花%s</string>
+    <string name="format_numofalbum">专辑(%1$d/%2$d)</string>
+    <string name="format_singleofablum">单曲%s</string>
+    <string name="format_commentofalbum">评论%s</string>
+    <string name="format_giftsofalbume">礼物%s</string>
+    <string name="format_numofsingle">单曲(%d张)</string>
+    <string name="format_kcoin">%dKC</string>
+    <string name="format_nationaverage">全国平均：%1$s分（%2$s）</string>
+    <string name="format_trillsound">合计：%1$s秒/%2$s回</string>
+    <string name="format_age">%s岁</string>
+    <string name="format_listencomment">%1$s收听 %2$s评论</string>
+    <string name="format_collectcomment">%1$s收藏 %2$s评论</string>
+    <string name="format_num_totalsingle">共%s首</string>
+    <string name="format_contribution">贡献%1$dK币+%2$d鲜花</string>
+    <string name="format_numofflowers">鲜花x%s</string>
+    <string name="format_single_album">确定（%1$d/%2$d）</string>
+    <string name="format_worktitle">%s的作品</string>
+    <string name="format_playlist_sum">(%s首)</string>
+    <string name="format_filesize">%.2fM</string>
+
+    <!--****************************成功提示********************************-->
+    <string name="tip_comment">评论成功</string>
+    <string name="tip_attent">关注成功</string>
+    <string name="tip_attent_cancel">关注取消</string>
+    <string name="tip_collect">收藏成功</string>
+    <string name="tip_collect_cancel">收藏取消</string>
+    <string name="tip_nonsupport_chorus">此歌曲不支持合唱，若需要请联系运营方反应</string>
+    <string name="tip_sendflowers">送花成功</string>
+    <string name="tip_receivemsg">接受消息修改成功</string>
+    <string name="tip_avatar_modifiy">个人资料修改成功</string>
+    <string name="tip_unopened_function">准备中，敬请期待</string>
+    <string name="tip_cantata_nonsupport_mv">清唱不支持添加视频</string>
+    <string name="tip_photo_uploadsuccess">图片上传成功</string>
+    <string name="tip_photo_deletsuccess">图片删除成功</string>
+    <string name="tip_respond_success">回复成功</string>
+    <string name="tip_sendgifts">送礼成功</string>
+    <string name="tip_report">举报成功</string>
+    <string name="tip_success_albumcreate">专辑创建成功</string>
+    <string name="tip_delete_success">删除成功！</string>
+    <string name="tip_voicesearch_uninstalled">未找到语言搜索的相关服务！</string>
+    <string name="tip_voicesearch_hint">开始识别</string>
+    <string name="tip_share_success">分享成功！</string>
+    <string name="tip_share_failed">分享失败！</string>
+    <string name="tip_share_cancel">分享取消！</string>
+    <string name="tip_share_clientvalid">请安装选择的分享客户端！</string>
+    <string name="tip_cantata_songname">请输入清唱名字！</string>
+    <string name="tip_touchlyric">轻触继续录制!</string>
+
+    <!--******************************错误提示*******************************-->
+    <string name="error_notlogin">请先登录！</string>
+    <string name="error_dataexception">数据异常</string>
+    <string name="error_nocomment">请输入评论内容！</string>
+    <string name="error_withoutrecord">请先录制！</string>
+    <string name="error_recordtime">请至少录制15s！</string>
+    <string name="error_recordmvtime">请至少录制30s！</string>
+    <string name="error_lyricexception">歌词初始化异常！</string>
+    <string name="error_lyricdownfail">歌词下载失败！</string>
+    <string name="error_accompany_notfound">未找到对应的伴奏文件！</string>
+    <string name="error_accompany_downfail">伴奏文件下载失败！</string>
+    <string name="error_chorusvideo_notfound">未找到对应的合唱MV文件！</string>
+    <string name="error_chorusvideo_downfail">合唱MV下载失败！</string>
+    <string name="error_getuserinfo">暂不支持获取用户信息！</string>
+    <string name="error_nohead">请选择头像！</string>
+    <string name="error_downloadfailed_song">歌曲下载失败！</string>
+    <string name="error_videofailedtoload">视频加载失败</string>
+    <string name="error_clickretry">点击重试</string>
+    <string name="error_recordall">合唱需要录制整首！</string>
+    <string name="error_singlelimit">最少5首,最多10首单曲</string>
+    <string name="error_input_albumname">请输入专辑名称！</string>
+    <string name="error_input_albumdesc">请输入专辑的说明！</string>
+    <string name="error_select_albumpicture">请选择专辑图片！</string>
+    <string name="error_not_sufficient_funds">K币不足！</string>
+    <string name="error_not_flower">鲜花数量不足！</string>
+    <string name="error_not_languagenvir">请选择语言环境！</string>
+    <string name="error_year_notlegal">请选择正确的年代！</string>
+    <string name="error_downfile_mid">评分文件下载失败！</string>
+
+    <!--**********************对话框提示****************************-->
+    <string name="dialog_rerecord">是否确定要重新录制？</string>
+    <string name="dialog_pauserecord">是否需要暂停录制?</string>
+    <string name="dialog_continuerecord">是否需要继续录制?</string>
+    <string name="dialog_finishrecord">是否需要结束录制？</string>
+    <string name="dialog_addvideo">是否确定要添加视频？</string>
+    <string name="dialog_savework">保存的作品属于未公开，确定需要保存？</string>
+    <string name="dialog_rerecord_left">取消</string>
+    <string name="dialog_rerecord_right">确定</string>
+    <string name="dialog_pleasewait">请稍等&#8230;</string>
+    <string name="dialog_cantata_resetsong">您要重唱这首歌吗？</string>
+    <string name="dialog_cantata_finish">是否完成录制？</string>
+    <string name="dialog_cantata_back">录制还没结束，确定要退出吗？</string>
+    <string name="dialog_practice_finish">练唱已结束，是否重新开始？</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_sure">确定</string>
+    <string name="dialog_publishworks">是否要发布作品？</string>
+    <string name="dialog_close">关闭</string>
+    <string name="dialog_tip">提示</string>
+    <string name="dialog_content">要删除这张照片吗？</string>
+    <string name="dialog_album_title">选择方式</string>
+    <string name="dialog_addvideo_reset">重录将重新开始视频拍摄，之前拍摄的部分不会保留，确定重录？</string>
+    <string name="dialog_practice_ready">轻触歌词开始练习！</string>
+    <string name="dialog_practice_audition">是否试听已录制的部分？</string>
+    <string name="dialog_practice_reset">是否结束试听，重新开始录制？</string>
+
+
+    <!--******************************权限***********************************-->
+    <string name="permiss_necessary">请在设置中开启读取外部存储卡、读取手机状态的权限。</string>
+    <string name="permiss_recordaudio">为了不影响您的使用，请在设置中开启去读取外部存储卡、录音的权限。</string>
+    <string name="permiss_recordmv">录制视频需要开启拍照、录音、读写外部存储卡的权限，请在“设置-应用”中开启。</string>
+    <string name="permiss_changephoto">需要开启拍照、读写外部存储卡的权限，请在“设置-应用”中开启。</string>
+
+    <string name="nolyricdata">暂无歌词</string>
+    <string name="all_images">全部图片</string>
+    <string name="folder_image_count">共%1$d张</string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="select_limit">最多选择%1$s张图片</string>
+    <string name="complete">完成</string>
+    <string name="select_complete">完成(%1$s/%2$s)</string>
+    <string name="preview_count">预览(%1$s)</string>
+    <string name="photo_crop">图片裁剪</string>
+    <string name="origin">原图</string>
+    <string name="origin_size">原图(%1$s)</string>
+
+    <!--**************************特殊符号**********************************-->
+    <!--其它#-->
+    <string name="symbol_other">&#035;</string>
+    <string name="symbol_and">和</string>
+    <!--游戏币单位-->
+    <string name="symbol_kcoin_unit">KC</string>
+    <!--分-->
+    <string name="symbol_unit_minute">分</string>
+    <!--秒-->
+    <string name="symbol_unit_second">秒</string>
+
+</resources>

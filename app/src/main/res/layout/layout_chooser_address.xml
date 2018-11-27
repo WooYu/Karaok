@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="136px"
+            android:background="#f6f6f6">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="48px"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="@string/dialog_cancel"
+                android:textColor="@color/text_dark"
+                android:textSize="43px" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/text_dark" />
+
+            <TextView
+                android:id="@+id/tv_determine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="26px"
+                android:text="@string/dialog_sure"
+                android:textColor="@color/text_dark"
+                android:textSize="43px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionspicker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <com.bigkoo.pickerview.lib.WheelView
+                android:id="@+id/options1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.bigkoo.pickerview.lib.WheelView
+                android:id="@+id/options2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.bigkoo.pickerview.lib.WheelView
+                android:id="@+id/options3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

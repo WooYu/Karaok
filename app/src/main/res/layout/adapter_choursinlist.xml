@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--歌手信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_d">
+        <!--头像-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/def_avatar_round" />
+
+        <!--歌手名称-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gapsize_d">
+
+            <!--歌手昵称-->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_d"
+                tools:text="歌手昵称" />
+
+            <!--评分-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gapsize_d"
+                android:layout_toRightOf="@id/tv_name"
+                android:textColor="@color/red_medium"
+                android:textSize="@dimen/typesize_e"
+                tools:text="92分" />
+
+            <!--时间-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d"
+                tools:text="12月24号 15:36" />
+
+            <!--说明-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="@dimen/gapsize_d"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d"
+                tools:text="我刚刚唱了一首歌" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--分割线-->
+    <include layout="@layout/layout_line_1dp" />
+</LinearLayout>

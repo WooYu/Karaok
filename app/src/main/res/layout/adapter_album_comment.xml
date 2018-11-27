@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="114px"
+        android:layout_height="114px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="34px"
+        android:layout_marginTop="45px"
+        android:background="@mipmap/def_avatar_round"
+        app:layout_auto_baseheight="width" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/typesize_d"
+        tools:text="皇族" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="12px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_e"
+        tools:text="04-19" />
+
+    <TextView
+        android:id="@+id/coment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_marginBottom="30px"
+        android:layout_marginTop="16px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/typesize_d"
+        tools:text="我们可以合唱吗？" />
+
+</RelativeLayout>

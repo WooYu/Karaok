@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--列表播放器-->
+    <com.clicktech.snsktv.widget.videoplayer.JuceVLCPlayer
+        android:id="@+id/list_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--封面图片-->
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <!--头像、人物信息、歌曲信息-->
+    <LinearLayout
+        android:id="@+id/ll_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gapsize_b"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/gapsize_f"
+        android:paddingStart="@dimen/gapsize_f"
+        android:paddingTop="@dimen/statusbar_view_height">
+        <!--头像-->
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/iv_intro_avatar"
+            android:layout_width="114px"
+            android:layout_height="114px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/def_circle_border_white_avatar"
+            app:layout_auto_basewidth="height"
+            app:mlborder_color="@color/green"
+            app:mlborder_width="1dp"
+            app:shape_type="round" />
+
+        <!--人物信息、歌曲信息-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/gapsize_d"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_intro_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d"
+                tools:text="人物信息" />
+
+            <TextView
+                android:id="@+id/tv_intro_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d"
+                tools:text="歌曲介绍" />
+        </LinearLayout>
+
+        <!--倒计时-->
+        <com.clicktech.snsktv.widget.animaoftiming.TimingAnimaView
+            android:id="@+id/timingview"
+            android:layout_width="114px"
+            android:layout_height="114px"
+            android:scaleType="fitXY"
+            app:layout_auto_basewidth="height" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

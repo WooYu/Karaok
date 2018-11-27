@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_dark"
+    android:fitsSystemWindows="true">
+
+    <!--标题：相册-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/singerintro_album"
+        app:titleRightText="@string/singerintro_edit" />
+
+    <!--相册列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerview"
+        android:layout_marginBottom="13px"
+        android:layout_marginLeft="17px"
+        android:layout_marginRight="17px"
+        android:layout_marginTop="13px" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/album_delete"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/gapsize_d"
+        android:background="@mipmap/msg_time_bac"
+        android:gravity="center"
+        android:padding="@dimen/gapsize_f"
+        android:textColor="@color/white"
+        android:textSize="@dimen/typesize_d"
+        tools:text="星期四  21:45" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34px">
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:layout_marginTop="30px"
+            android:src="@mipmap/msg_img_left" />
+
+        <TextView
+            android:id="@+id/msg_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26px"
+            android:layout_toRightOf="@+id/img_left"
+            android:background="@mipmap/msg_detail_bac"
+            android:lineSpacingExtra="38px"
+            android:paddingBottom="38px"
+            android:paddingLeft="40px"
+            android:paddingRight="10px"
+            android:paddingTop="38px"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_d"
+            tools:text="今日ロツインで、花を貰いました。" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

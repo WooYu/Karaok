@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#403836</color>
+    <color name="colorPrimaryDark">#3E3837</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWindowBg">#F6F5EC</color>
+    <color name="colorTextPrimary">#FF4081</color>
+    <color name="theme_body">#cc22292c</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <color name="black_medium">#cc000000</color>
+    <color name="black_light">#33000000</color>
+    <!--灰色-->
+    <color name="gainsboro">#DCDCDC</color><!--浅灰色-->
+    <color name="lightgray">#D3D3D3</color><!--浅灰色-->
+    <color name="silver">#C0C0C0</color><!--银灰色-->
+    <color name="darkgray">#A9A9A9</color><!--深灰色-->
+    <color name="gray">#808080</color><!--灰色-->
+    <!--暗淡灰-->
+    <!--白色-->
+    <color name="white">#FFFFFF</color><!--纯白-->
+    <color name="whitesmoke">#F5F5F5</color><!--白烟-->
+    <!--红色-->
+    <color name="red_dark">#8B0000</color>
+    <color name="red_medium">#F04F43</color>
+    <color name="red_light">#FF4500</color>
+
+    <!--橙色-->
+    <color name="orange">#FFF000</color>
+    <color name="darkgoldenrod">#B8860B</color>
+    <!--蓝色-->
+    <color name="blue">#00BEE7</color>
+    <!--绿色-->
+    <color name="green">#04FEE3</color>
+    <!--粉色-->
+    <color name="pink">#E22FFF</color>
+    <!--透明-->
+    <color name="transparent">#11000000</color>
+    <color name="transparent_dialogbg">#88000000</color>
+    <!--字体颜色-->
+    <color name="text_dark">#333333</color>
+    <color name="text_medium">#555555</color>
+    <color name="text_light">#888888</color>
+    <!--标题颜色-->
+    <color name="titlebar_bg">#3E3837</color>
+    <!--背景色-->
+    <color name="common_bg">#F5F5F5</color>
+
+    <!--*******************************************************************************-->
+
+    <!--我的页面头布局暗黑色-->
+    <color name="mine_head_bac">#434343</color>
+
+    <!--通知背景色-->
+    <color name="inform_bg_dark">#24262b</color>
+    <color name="inform_bg_light">#262e32</color>
+
+    <!--加载进度颜色-->
+    <color name="dialog_loading">#f9355b</color>
+
+    <!--城市选择-->
+    <color name="cp_gray">#8c8c8c</color>
+    <color name="cp_gray_deep">#5c5c5c</color>
+    <color name="cp_divider">#E5E5E5</color>
+    <color name="cp_content_bg">#F3F3F3</color>
+
+    <!--a-z快速查找-->
+    <!-- 浅白fff0a75b -->
+    <!-- 不透明#fff0e6dc -->
+    <color name="cc_lay_pressed_untran_dark">#fff5f5f5</color>
+    <color name="cc_dark_fade">#33000000</color>
+    <color name="cc_line">#11000000</color>
+    <!-- 描边颜色fff1f1f1 -->
+    <color name="cc_list_title_bk">#f0f0f0</color>
+    <!-- cc color end -->
+
+    <!--地址选择-->
+    <color name="div_color">#f1eff0</color>
+    <color name="div_color_other">#4d333333</color>
+</resources>

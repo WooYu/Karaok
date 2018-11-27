@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingEnd="2dp">
+
+    <RelativeLayout
+        android:id="@+id/rll_item_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/discover_item_bgimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/def_square_large" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/shape_discover_popsinger_bac" />
+
+        <TextView
+            android:id="@+id/tv_singer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/singer_desc"
+            android:layout_marginLeft="20px"
+            android:text="高桥留美子"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+        <LinearLayout
+            android:id="@+id/singer_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/gapsize_f">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:src="@mipmap/discover_play_erji" />
+
+            <TextView
+                android:id="@+id/discover_listen_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gapsize_g"
+                android:layout_marginRight="@dimen/gapsize_f"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9px"
+                android:src="@mipmap/discover_play_jiangbei" />
+
+            <TextView
+                android:id="@+id/tv_trophy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/gapsize_f"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

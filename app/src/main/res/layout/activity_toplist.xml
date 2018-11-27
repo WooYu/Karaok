@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleGravity="left"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleRightImg="@mipmap/search_icon" />
+
+    <com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--广告图-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/def_banner" />
+
+            <!--推荐k歌列表-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/gapsize_d" />
+
+            <!--往期专题推荐-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gapsize_d"
+                android:layout_marginLeft="@dimen/gapsize_d"
+                android:layout_marginTop="@dimen/gapsize_a"
+                android:text="@string/banner_special"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_d" />
+
+            <include layout="@layout/layout_line_1dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_special"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView>
+</LinearLayout>

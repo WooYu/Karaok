@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp">
+
+        <!--奖章-->
+        <RelativeLayout
+            android:layout_width="35dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ranking_1" />
+
+            <TextView
+                android:id="@+id/tv_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="@color/text_medium"
+                android:textSize="@dimen/typesize_a"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!--头像-->
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/item_singesrs_avater"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/def_avatar_round"
+            app:mlborder_color="@color/green"
+            app:mlborder_width="2dp"
+            app:shape_type="round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+            <!--歌手-->
+            <TextView
+                android:id="@+id/item_singesrs_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="杰伦"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_c" />
+
+            <!--歌曲名-->
+            <TextView
+                android:id="@+id/item_singesrs_songname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:drawableStart="@mipmap/discover_sing"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="一人饮酒醉"
+                android:textColor="@color/text_medium"
+                android:textSize="@dimen/typesize_d" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

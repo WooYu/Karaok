@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/titlebar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_search">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gapsize_e"
+        android:layout_marginStart="@dimen/gapsize_c"
+        android:layout_marginTop="@dimen/gapsize_e"
+        android:layout_weight="1"
+        android:background="#646464">
+
+        <EditText
+            android:id="@+id/et_searchkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="120px"
+            android:background="@null"
+            android:drawablePadding="10px"
+            android:drawableStart="@mipmap/search_icon"
+            android:hint="@string/search_refer_hint"
+            android:maxLines="1"
+            android:paddingBottom="18px"
+            android:paddingStart="30px"
+            android:paddingTop="18px"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_voicesearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10px"
+                android:paddingEnd="20px"
+                android:paddingStart="20px"
+                android:paddingTop="10px"
+                android:src="@mipmap/search_record"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10px"
+                android:paddingEnd="20px"
+                android:paddingStart="20px"
+                android:paddingTop="10px"
+                android:src="@mipmap/search_clear"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingEnd="@dimen/gapsize_c"
+        android:paddingStart="@dimen/gapsize_c"
+        android:text="@string/dialog_cancel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/typesize_d" />
+</LinearLayout>

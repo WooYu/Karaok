@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_musichall"
+    android:orientation="vertical">
+
+    <!--状态栏填充-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:background="@color/titlebar_bg" />
+
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_size"
+        android:background="@mipmap/bg_title_msg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/musichall_title" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!--轮播图-->
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/convenientBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/learnsing_banner_size"
+                app:canLoop="true" />
+
+            <!--功能模块-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/view_artistname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/selector_bg_musichall_artistname" />
+
+                <ImageView
+                    android:id="@+id/view_songname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/selector_bg_musichall_songname" />
+
+                <ImageView
+                    android:id="@+id/view_chorus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/selector_bg_musichall_chorus" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/view_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/selector_bg_musichall_time" />
+
+                <ImageView
+                    android:id="@+id/view_cantata"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/selector_bg_musichall_cantata" />
+
+                <ImageView
+                    android:id="@+id/view_practice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/selector_bg_musichall_practice" />
+            </LinearLayout>
+
+            <!--热榜推荐、猜你喜欢、新歌首发-->
+            <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+                android:id="@+id/rg_musichall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gapsize_f"
+                android:layout_marginRight="@dimen/gapsize_f"
+                android:layout_marginTop="@dimen/gapsize_b"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_musichall_popular"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/rb_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_musichall_recommend"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/rb_newly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_musichall_newly"
+                    android:button="@null" />
+            </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+            <!--歌曲列表-->
+            <FrameLayout
+                android:id="@+id/layout_songlist"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/gapsize_f"
+                android:layout_marginRight="@dimen/gapsize_f"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

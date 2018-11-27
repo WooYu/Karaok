@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.clicktech.snsktv">
+
+    <!-- 权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 组件 -->
+    <application
+        android:name=".common.KtvApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_karaok"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+        <activity
+            android:name=".module_enter.ui.activity.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module_enter.ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".module_home.ui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module_home.ui.activity.TopListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.SingerSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.SingerListWithTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ClassifyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.YearsBetweenSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.EverSongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.LearnSingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.NationalPopularityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.HotSingersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.HotSongsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.ListenRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.FriendRankListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.CityPickerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".module_discover.ui.activity.RichListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.SingerIntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.SingerAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_enter.ui.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_enter.ui.activity.RegistUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ChoursInListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module_mine.ui.activity.DatumEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_FansListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_Att_UserListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_MyWorksListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_MyTracksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_MyChorusSongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_Chrous_SingedListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_MyListenHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_MyHistorySoundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.Mine_MyCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.NetworkRemindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.MsgReceiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.WipeCacheActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.KSingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ToBeAnnounceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ChorusTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ChorusWorksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ChorusSingerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.AnnounceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module_discover.ui.activity.SongDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.SelectRoleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.PopuSingerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.PopuSongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_enter.ui.activity.ShowUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ThemeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.OtherAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.SongSortActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.AlbumProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module_mine.ui.activity.SingleMusicForAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.LocalRecordingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.LocalRecordingPublishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.KSingWithMVActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.ToBeAnnoWithMVActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.MvPreviewFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.MvPreviewSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.AlbumDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.KCoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.LatelyListenerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.PrivateLetterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.GiftListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".module_mine.ui.activity.SystemMsgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.GIftRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.OthersAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.SearchUserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".module_mine.ui.activity.AboutOurActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_mine.ui.activity.FunctionintroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.ChooseProinceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.CantataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.PracticingSingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_enter.ui.activity.RegistUser_YaHooActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:permission="android.permission.INTERNET"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="yj-5za3d" />
+                <data android:host="cb" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module_enter.ui.activity.PreviewWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_enter.ui.activity.ProtocolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.AddVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.MoreSongsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_home.ui.activity.OtherShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module_discover.ui.activity.SelectCityActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- *****************************Meta-Data********************************************** -->
+        <!-- AutoLayout Start -->
+        <!--
+      AutoLayout meta将设计图的宽高配置后,配合AutoLauout控件使用,在设计图尺寸以外的其它尺寸手机上,
+      也能达到和设计图一样的效果
+        -->
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+        <!-- AutoLayout End -->
+
+
+        <!-- Glide   Start -->
+        <!-- glide配置 -->
+        <meta-data
+            android:name="com.clicktech.snsktv.arms.widget.imageloader.glide.GlideConfiguration"
+            android:value="GlideModule" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.clicktech.snsktv.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/take_pnoto" />
+        </provider>
+        <!-- Glide End -->
+
+        <!-- *************************Service************************************************ -->
+        <service android:name=".module_mine.ui.service.MiniPlayerService" />
+
+        <!-- aws-s3 Start -->
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+        <!-- aws-s3 End -->
+
+
+        <!-- ***********************Receiver************************************************** -->
+        <receiver
+            android:name=".module_mine.ui.receiver.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/tobeanno_bg"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <!--标题：歌曲名称-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_medium"
+        app:titleAlpha="0"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/tobeanno_titlename" />
+
+    <!--*****************************************************************************************-->
+
+    <com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/gapsize_c"
+        android:paddingLeft="@dimen/gapsize_c"
+        android:paddingRight="@dimen/gapsize_c"
+        android:paddingTop="@dimen/gapsize_f"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <!--音量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bg_tobeanounce"
+                android:orientation="vertical"
+                android:padding="@dimen/gapsize_d">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tobeanno_voice"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/typesize_c" />
+
+                <!--人声音量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/tobeanno_voicevol"
+                        android:text="@string/tobeanno_voicevol"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_e" />
+
+                    <SeekBar
+                        android:id="@+id/sbar_voicevol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10"
+                        android:maxHeight="@dimen/toannounce_height"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/layer_progress_orange"
+                        android:splitTrack="false"
+                        android:thumb="@mipmap/tobeanno_thumb" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--混响-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_f"
+                android:background="@drawable/shape_bg_tobeanounce"
+                android:orientation="vertical"
+                android:padding="@dimen/gapsize_d">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tobeanno_reverb"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/typesize_c" />
+
+                <!--混响列表-->
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/cbanner_reverb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/learnsing_banner_size"
+                    app:canLoop="true" />
+            </LinearLayout>
+
+            <!--变音-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_f"
+                android:background="@drawable/shape_bg_tobeanounce"
+                android:orientation="vertical"
+                android:padding="@dimen/gapsize_d">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tobeanno_inflexion"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/typesize_c" />
+
+                <!--变音列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_inflexion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView2>
+
+    <!--播放/暂停、进度、播放时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/gapsize_d"
+        android:paddingLeft="@dimen/gapsize_a"
+        android:paddingRight="@dimen/gapsize_a"
+        android:paddingTop="@dimen/gapsize_d">
+
+        <CheckBox
+            android:id="@+id/cb_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_tobeanno_playstatus"
+            android:checked="true" />
+
+        <com.clicktech.snsktv.widget.seekbar.IssueSeekBar
+            android:id="@+id/sBar_playprogress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxHeight="@dimen/toannounce_height"
+            android:progressDrawable="@drawable/layer_progress_red"
+            android:splitTrack="false"
+            android:thumb="@mipmap/tobeanno_thumb"
+            app:img="@mipmap/tobeanno_seekbar_tip"
+            app:textcolor="@color/white"
+            app:textsize="@dimen/typesize_f" />
+
+        <TextView
+            android:id="@+id/tv_playprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ksong_time_initial"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!--底部布局:重录、发布、保存-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="215px"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/gapsize_a"
+        android:paddingRight="@dimen/gapsize_a">
+
+        <TextView
+            android:id="@+id/tv_remake"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/tobeanno_reset"
+            android:gravity="center"
+            android:text="@string/tobeanno_remake"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_addVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/tobeanno_addvideo"
+            android:gravity="center"
+            android:text="@string/tobeanno_addavideo"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/tobeanno_publish"
+            android:gravity="center"
+            android:text="@string/tobeanno_announce"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/tobeanno_save"
+            android:gravity="center"
+            android:text="@string/tobeanno_save"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210px"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/layout_line_1dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/chours_avatar"
+            android:layout_width="148px"
+            android:layout_height="148px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="36px"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/def_square_round" />
+
+        <TextView
+            android:id="@+id/tv_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:layout_toRightOf="@+id/chours_avatar"
+            android:textColor="#1e1e1e"
+            android:textSize="@dimen/typesize_d"
+            tools:text="曲名" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_music_name"
+            android:layout_marginTop="12px"
+            android:layout_toRightOf="@+id/chours_avatar"
+            android:drawableLeft="@mipmap/album_erji"
+            android:drawablePadding="22px"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/typesize_e"
+            tools:text="5994" />
+
+        <ImageView
+            android:id="@+id/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:src="@mipmap/arrow_right" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleGravity="center"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/album_make"
+        app:titleRightText="@string/album_issue" />
+
+    <!--专辑名称-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115px"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/tv_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28px"
+            android:layout_marginRight="40dp"
+            android:background="@null"
+            android:maxLength="20"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c"
+            tools:text="morgan最爱" />
+
+        <TextView
+            android:id="@+id/tv_albumname_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24px"
+            android:text="0/20"
+            android:textColor="#cfcfcf"
+            android:textSize="@dimen/typesize_d" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24px" />
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="282px"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_left"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="24px">
+
+            <ImageView
+                android:id="@+id/im_imagview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/def_square_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:layout_alignParentBottom="true"
+                android:background="#50000000"
+                android:gravity="center"
+                android:text="@string/announce_change"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_e" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="24px"
+            android:layout_marginTop="24px"
+            android:layout_toRightOf="@id/rl_left">
+
+            <EditText
+                android:id="@+id/edt_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="22dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/album_desc_hint"
+                android:maxLength="140"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_c" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/pression"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_detail_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="0/140"
+                android:textColor="#cfcfcf"
+                android:textSize="@dimen/typesize_e" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <!--专辑歌曲-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#f6f6f6"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gapsize_d"
+        android:paddingTop="@dimen/gapsize_d">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:text="@string/album_songs"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_d" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/album_songs_limit"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/typesize_f" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <!--添加作品-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_works_add"
+            android:layout_width="126px"
+            android:layout_height="126px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="34px"
+            android:src="@mipmap/works_add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/im_works_add"
+            android:text="@string/album_addsong"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_d" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gainsboro" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+</LinearLayout>

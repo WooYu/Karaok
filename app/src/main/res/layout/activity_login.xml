@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/login_bac"
+        android:orientation="vertical">
+
+        <!--商标-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="228px"
+            android:src="@mipmap/login_logo" />
+
+        <!--欢迎标语-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="66px"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_slogan_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_a" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_slogan_2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_a"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_slogan_3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_a"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gapsize_d"
+                android:text="@string/enter_slogan_4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_a" />
+
+        </LinearLayout>
+
+        <!--非中文环境的登录方式-->
+        <LinearLayout
+            android:id="@+id/language_nonchinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64px"
+            android:layout_marginRight="64px"
+            android:layout_marginTop="400px"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/login_facebook"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_facebook" />
+
+            <ImageView
+                android:id="@+id/login_tw"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_tw" />
+
+            <ImageView
+                android:id="@+id/login_line"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_line" />
+
+            <ImageView
+                android:id="@+id/login_yahu"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_yahu" />
+
+        </LinearLayout>
+
+        <!--中文环境的登录方式-->
+        <LinearLayout
+            android:id="@+id/language_chinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64px"
+            android:layout_marginRight="64px"
+            android:layout_marginTop="400px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/login_qq"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_qq" />
+
+            <ImageView
+                android:id="@+id/login_wx"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_wx" />
+
+            <ImageView
+                android:id="@+id/login_sina"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_sina" />
+
+        </LinearLayout>
+
+        <!--或-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="364px"
+                android:layout_height="2px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40px"
+                android:layout_marginRight="40px"
+                android:text="@string/enter_or"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_c" />
+
+            <View
+                android:layout_width="364px"
+                android:layout_height="2px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <!--更多登录方式-->
+        <TextView
+            android:id="@+id/login_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48px"
+            android:padding="20px"
+            android:text="@string/enter_otherlogin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+        <!--用户协议-->
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50px"
+            android:autoLink="all"
+            android:padding="20px"
+            android:text="@string/enter_protocoltip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_d" />
+    </LinearLayout>
+
+</LinearLayout>

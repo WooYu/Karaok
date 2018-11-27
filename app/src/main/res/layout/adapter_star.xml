@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/gapsize_d">
+
+    <!--头像-->
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/def_avatar_round" />
+
+    <!--歌曲、歌手、合唱次数-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gapsize_d"
+        android:layout_marginRight="@dimen/gapsize_d"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--歌曲-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小酒哦"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c" />
+
+        <!--歌手、合唱次数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapsize_d"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="与林俊杰合唱"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_d" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gapsize_d"
+                android:text="唱歌9次"
+                android:textColor="@color/text_medium"
+                android:textSize="@dimen/typesize_d" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--加入合唱-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kge"
+        android:gravity="center"
+        android:text="@string/chorus_join"
+        android:textColor="@color/text_medium"
+        android:textSize="@dimen/typesize_d" />
+
+
+</LinearLayout>

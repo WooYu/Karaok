@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_indexes"
+        android:layout_width="fill_parent"
+        android:layout_height="27dp"
+        android:background="@color/cc_list_title_bk"
+        android:drawableStart="@mipmap/item_original"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp"
+        tools:text="A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp">
+
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/def_square_round"
+            app:mlborder_width="0dp"
+            app:radius="2dp"
+            app:shape_type="rectangle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                tools:text="曲名" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/text_medium"
+                android:textSize="13sp"
+                tools:text="评论" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ksong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_bg_blue_roundedcorners"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="3dp"
+            android:text="@string/ksong"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+</LinearLayout>

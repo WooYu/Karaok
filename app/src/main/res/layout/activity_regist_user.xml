@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--登录标题-->
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/enter_regist_info" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="440px"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+                    android:id="@+id/regist_iv_avater"
+                    android:layout_width="140px"
+                    android:layout_height="140px"
+                    android:layout_marginTop="64px"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/def_avatar_round"
+                    app:layout_auto_basewidth="height"
+                    app:mlborder_width="0dp"
+                    app:shape_type="round" />
+
+                <TextView
+                    android:id="@+id/regist_tv_avater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_marginTop="32px"
+                    android:background="@drawable/shape_bg_changeavatar_lightgray"
+                    android:gravity="center"
+                    android:text="@string/enter_regist_info_upavater"
+                    android:textColor="#030303"
+                    android:textSize="38px" />
+            </LinearLayout>
+
+            <!--昵称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/enter_regist_info_unick"
+                    android:textColor="#969696"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_dark"
+                    android:textSize="43px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="26px"
+                    android:src="@mipmap/album_right_arrow" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="58px"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/nickname_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_regist_info_unick"
+                    android:textColor="#969696"
+                    android:textSize="35px" />
+
+                <EditText
+                    android:id="@+id/m_nickname"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/enter_regist_info_unick_hint"
+                    android:maxLength="15"
+                    android:textColor="@color/text_dark"
+                    android:textSize="43px" />
+
+                <ImageView
+                    android:id="@+id/m_nickname_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="26px"
+                    android:src="@mipmap/album_right_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_sex"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="58px"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/sex_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_datum_sex"
+                    android:textColor="#969696"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/m_sex"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    tools:text="男"
+                    android:textColor="@color/text_dark"
+                    android:textSize="43px" />
+
+                <ImageView
+                    android:id="@+id/m_sex_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="26px"
+                    android:src="@mipmap/album_right_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_birthday"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginStart="58px"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/birthday_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_datum_birthday"
+                    android:textColor="#969696"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/m_birthday"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    tools:text="0000-00-00"
+                    android:textColor="@color/text_dark"
+                    android:textSize="43px" />
+
+                <ImageView
+                    android:id="@+id/m_birthday_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="26px"
+                    android:src="@mipmap/album_right_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+            <LinearLayout
+                android:id="@+id/ll_address"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="58px"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/address_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_datum_area"
+                    android:textColor="#969696"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/m_address"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_dark"
+                    tools:text="东京"
+                    android:textSize="43px" />
+
+                <ImageView
+                    android:id="@+id/m_address_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="26px"
+                    android:src="@mipmap/album_right_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="242px"
+                    android:background="@drawable/shape_editprofile_bg"
+                    android:gravity="center"
+                    android:text="@string/enter_regist_info_submit"
+                    android:textColor="@color/white"
+                    android:textSize="35px" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

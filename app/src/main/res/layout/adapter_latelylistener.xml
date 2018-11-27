@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="164px"
+    android:background="@color/white">
+
+
+    <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+        android:id="@+id/avatar"
+        android:layout_width="94px"
+        android:layout_height="94px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="30px"
+        android:background="@mipmap/def_avatar_round"
+        app:mlborder_color="@android:color/transparent"
+        app:mlborder_width="4px"
+        app:shape_type="round" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/typesize_c"
+        tools:text="张学友" />
+
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="20px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_d"
+        tools:text="访问了你的主页" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="42px"
+        android:layout_marginTop="26px"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_e"
+        tools:text="昨天  15:24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_line_1dp" />
+    </LinearLayout>
+
+</RelativeLayout>

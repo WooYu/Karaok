@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_cantata"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_medium"
+        app:titleAlpha="0"
+        app:titleGravity="center"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/mine_workslist_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_albuminfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--专辑-->
+        <TextView
+            android:id="@+id/tv_album_index"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/gapsize_c"
+            android:paddingTop="@dimen/gapsize_c"
+            android:text="@string/singerintro_special"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gapsize_a"
+            android:layout_marginTop="@dimen/gapsize_a"
+            android:clipChildren="false">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/albumviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:clipChildren="false" />
+        </RelativeLayout>
+
+        <!--专辑信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gapsize_b"
+            android:layout_marginStart="@dimen/gapsize_c">
+
+            <TextView
+                android:id="@+id/tv_album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gapsize_d"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_c"
+                tools:text="专辑名称" />
+
+            <TextView
+                android:id="@+id/tv_album_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_album_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d"
+                tools:text="单曲 0" />
+
+            <TextView
+                android:id="@+id/tv_album_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_album_name"
+                android:layout_marginStart="@dimen/gapsize_b"
+                android:layout_toEndOf="@id/tv_album_single"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d"
+                tools:text="评论 0" />
+
+            <TextView
+                android:id="@+id/tv_album_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_album_comment"
+                android:layout_below="@id/tv_album_name"
+                android:layout_marginStart="@dimen/gapsize_b"
+                android:layout_toEndOf="@id/tv_album_comment"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d"
+                tools:text="礼物 0" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--单曲-->
+    <TextView
+        android:id="@+id/tv_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/gapsize_c"
+        android:text="@string/album_single"
+        android:textColor="@color/white"
+        android:textSize="@dimen/typesize_c" />
+
+    <!--单曲列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_single"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

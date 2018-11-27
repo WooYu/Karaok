@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/hall_years_ago"
+        app:titleRightImg="@mipmap/search_icon" />
+
+    <com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/gapsize_d">
+                <!--全部-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/gapsize_d"
+                    android:text="@string/year_between_yearbedin"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_b" />
+
+                <cn.qqtheme.framework.widget.WheelView
+                    android:id="@+id/wheelview"
+                    android:layout_width="match_parent"
+                    android:layout_height="350px"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100px"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/gapsize_d">
+                <!--全部-->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/gapsize_d"
+                    android:text="@string/year_between_yearend"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_b" />
+
+                <cn.qqtheme.framework.widget.WheelView
+                    android:id="@+id/end_wheelview"
+                    android:layout_width="match_parent"
+                    android:layout_height="350px" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape_bg_blue_roundedcorners"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/year_between_yearbt"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_b" />
+
+        </LinearLayout>
+
+    </com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_d">
+
+        <ImageView
+            android:id="@+id/chours_avatar"
+            android:layout_width="126px"
+            android:layout_height="126px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/def_square_round"
+            app:layout_auto_basewidth="height" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/gapsize_f"
+            android:layout_marginStart="@dimen/gapsize_f"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_d"
+                tools:text="曲名" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_f"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_e"
+                    tools:text="状态评论" />
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gapsize_f"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_e"
+                    tools:text="0.8M" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gapsize_f"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_e"
+                    tools:text="今天 10:50" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:background="@drawable/shape_bg_chorus"
+            android:gravity="center"
+            android:text="@string/announce"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_d" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+</LinearLayout>

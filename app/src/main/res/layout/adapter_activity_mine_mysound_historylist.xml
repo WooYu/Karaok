@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="168px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--歌手头像、昵称-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+                android:id="@+id/item_mine_mychrous_songpic"
+                android:layout_width="@dimen/mine_mychrous_item_pic_w_h"
+                android:layout_height="@dimen/mine_mychrous_item_pic_w_h"
+                android:layout_marginLeft="26px"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/def_square_round"
+                app:layout_auto_basewidth="height"
+                app:mlborder_width="0dp"
+                app:radius="8px"
+                app:shape_type="rectangle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_mine_mychrous_songname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24px"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="孤独终老" />
+
+                <TextView
+                    android:id="@+id/item_mine_mychrous_singername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24px"
+                    android:layout_marginTop="28px"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_e"
+                    tools:text="孤独终老" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_mine_mychroussongs_time"
+            android:layout_width="160px"
+            android:layout_height="65px"
+            android:layout_marginLeft="@dimen/gapsize_d"
+            android:layout_marginRight="26px"
+            android:background="@drawable/shape_editprofile_bg"
+            android:gravity="center"
+            android:text="继续"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_d" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/whitesmoke" />
+</LinearLayout>

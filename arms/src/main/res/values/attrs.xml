@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--百分比布局-->
+    <declare-styleable name="AutoTabLayout">
+        <attr name="auto_textSize_base_width" format="boolean"></attr>
+    </declare-styleable>
+
+    <!--下拉放大的view-->
+    <declare-styleable name="PullToZoomView">
+        <attr name="headerView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="zoomView" format="reference" />
+        <attr name="isHeaderParallax" format="boolean" />
+    </declare-styleable>
+
+    <!--固定头布局的ViewPager-->
+    <declare-styleable name="HeaderViewPager">
+        <attr name="hvp_topOffset" format="dimension" />
+    </declare-styleable>
+
+</resources>

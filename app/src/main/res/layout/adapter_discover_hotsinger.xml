@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gapsize_d"
+        android:paddingRight="@dimen/gapsize_d"
+        android:paddingTop="@dimen/gapsize_d">
+        <!--奖章-->
+        <RelativeLayout
+            android:layout_width="@dimen/learnsing_ranking_width"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/learnsing_medal"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="@color/text_medium"
+                android:textSize="@dimen/typesize_d" />
+        </RelativeLayout>
+
+        <!--头像-->
+        <ImageView
+            android:id="@+id/item_singesrs_avater"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/def_avatar_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gapsize_d"
+            android:orientation="vertical">
+            <!--歌手-->
+            <TextView
+                android:id="@+id/item_singesrs_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杰伦"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_d" />
+
+            <!--歌曲名-->
+            <TextView
+                android:id="@+id/item_singesrs_songname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_g"
+                android:drawableLeft="@mipmap/discover_sing"
+                android:gravity="center"
+                android:text="一人饮酒醉"
+                android:textSize="@dimen/typesize_e" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+</LinearLayout>

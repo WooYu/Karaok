@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--歌曲排行榜-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/gapsize_g"
+            android:background="@drawable/shape_bg_songlist"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/gapsize_h"
+            android:paddingStart="@dimen/gapsize_h">
+
+            <ImageView
+                android:layout_width="@dimen/songdetail_fragment_left_topiconsize"
+                android:layout_height="@dimen/songdetail_fragment_left_topiconsize"
+                android:layout_marginRight="@dimen/gapsize_g"
+                android:scaleType="fitXY"
+                android:src="@mipmap/songdetail_crown_left"
+                app:layout_auto_basewidth="height" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/songdetail_songrank"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_c" />
+
+            <ImageView
+                android:layout_width="@dimen/songdetail_fragment_left_topiconsize"
+                android:layout_height="@dimen/songdetail_fragment_left_topiconsize"
+                android:layout_marginLeft="@dimen/gapsize_g"
+                android:scaleType="fitXY"
+                android:src="@mipmap/songdetail_crown_left"
+                app:layout_auto_basewidth="height" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_moresong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/gapsize_a"
+            android:paddingLeft="@dimen/gapsize_a"
+            android:text="@string/songdetail_more"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gapsize_d"
+        android:background="@drawable/shape_bg_comment"
+        android:padding="@dimen/gapsize_f"
+        android:visibility="invisible" />
+
+    <!--评论-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/gapsize_d"
+        android:background="@drawable/shape_bg_songlist"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/gapsize_d"
+        android:paddingStart="@dimen/gapsize_g">
+
+        <ImageView
+            android:layout_width="@dimen/songdetail_fragment_left_bottomiconsize"
+            android:layout_height="@dimen/songdetail_fragment_left_bottomiconsize"
+            android:layout_marginRight="@dimen/gapsize_g"
+            android:scaleType="fitXY"
+            android:src="@mipmap/songdetail_comment_left"
+            app:layout_auto_basewidth="height" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/songdetail_commentlist"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/shape_bg_comment"
+        android:visibility="invisible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/gapsize_e" />
+    </FrameLayout>
+</LinearLayout>

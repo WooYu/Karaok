@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gainsboro"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_japan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/gapsize_b"
+            android:text="@string/enter_nation_jp"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c" />
+
+        <TextView
+            android:id="@+id/tv_china"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapsize_h"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/gapsize_b"
+            android:text="@string/enter_nation_cn"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapsize_d"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/gapsize_b"
+            android:text="@string/mine_playlist_close"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c" />
+
+    </LinearLayout>
+</RelativeLayout>

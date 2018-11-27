@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsource>
+    <paths>
+
+        <!--获取andr n 的 读取文件的权限（安装apk）-->
+        <external-path
+            name="take_photo"
+            path="" />
+        <!--<external-path path="Android/data/com.clicktech.snsktv/" name="files_root" />-->
+        <!--<external-path path="." name="external_storage_root" />-->
+
+    </paths>
+
+</rsource>

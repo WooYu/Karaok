@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/search_titlename" />
+
+    <EditText
+        android:id="@+id/et_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gapsize_d"
+        android:background="@drawable/shape_bg_searchinput"
+        android:drawableStart="@mipmap/searchuser_img"
+        android:gravity="center"
+        android:hint="@string/search_titlename"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/gapsize_f"
+        android:paddingEnd="@dimen/gapsize_d"
+        android:paddingStart="@dimen/gapsize_d"
+        android:paddingTop="@dimen/gapsize_f"
+        android:textColor="@color/text_light"
+        android:textColorHint="@color/text_light"
+        android:textSize="@dimen/typesize_c" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_friend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

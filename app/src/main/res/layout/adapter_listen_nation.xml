@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="1dp"
+    android:background="@mipmap/item_singer_bac"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <!--奖章-->
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_ranking"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ranking_1" />
+
+        <TextView
+            android:id="@+id/tv_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="10"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!--头像-->
+    <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/def_avatar_square"
+        app:mlborder_color="@color/green"
+        app:mlborder_width="1dp"
+        app:radius="3dp"
+        app:shape_type="rectangle" />
+
+    <ImageView
+        android:id="@+id/iv_sex"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/mine_sex_male" />
+
+    <!--歌手名称-->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="我心梦飞翔"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp" />
+
+
+</LinearLayout>

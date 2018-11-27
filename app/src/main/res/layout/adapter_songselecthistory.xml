@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180px"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/im_song_atatar"
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:layout_marginLeft="@dimen/gapsize_e"
+        android:layout_marginRight="@dimen/gapsize_e"
+        android:scaleType="centerCrop"
+        app:layout_auto_basewidth="height" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_tv_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c"
+            tools:text="后来的我们" />
+
+        <TextView
+            android:id="@+id/item_tv_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/singerselect_view_h_i"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/typesize_c"
+            tools:text="王心灵" />
+
+    </LinearLayout>
+</LinearLayout>

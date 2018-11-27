@@ -1,0 +1,121 @@
+<resources>
+    <!--字体大小:20sp\16sp\14sp\13sp\12sp\11sp\9sp-->
+    <dimen name="typesize_a">60px</dimen>
+    <dimen name="typesize_b">48px</dimen>
+    <dimen name="typesize_c">42px</dimen>
+    <dimen name="typesize_d">39px</dimen>
+    <dimen name="typesize_e">36px</dimen>
+    <dimen name="typesize_f">33px</dimen>
+    <dimen name="typesize_g">27px</dimen>
+
+    <!--常用间隔:20dp\15dp\12dp\10dp\8dp\5dp\3dp\1dp-->
+    <dimen name="gapsize_a">60px</dimen>
+    <dimen name="gapsize_b">45px</dimen>
+    <dimen name="gapsize_c">36px</dimen>
+    <dimen name="gapsize_d">30px</dimen>
+    <dimen name="gapsize_e">24px</dimen>
+    <dimen name="gapsize_f">15px</dimen>
+    <dimen name="gapsize_g">9px</dimen>
+    <dimen name="gapsize_h">3px</dimen>
+    <dimen name="gapsize_i">1px</dimen>
+
+    <!--标题高度-->
+    <dimen name="titlebar_size">150px</dimen>
+
+    <!--输入框高度-->
+
+    <!--状态栏高度-->
+    <dimen name="statusbar_view_height">0dp</dimen>
+
+    <!--*****************************RadioButton*******************************************-->
+    <dimen name="RButton_FixedSizeWidth">360px</dimen>
+    <dimen name="RButton_FixedSizeHeight">114px</dimen>
+
+    <!--***********************************发现********************************-->
+    <dimen name="discover_rank_width">320px</dimen>
+    <dimen name="discover_bottom_rank_width">350px</dimen>
+    <dimen name="discover_bottom_rank_height">684px</dimen>
+    <dimen name="discover_rank_height">480px</dimen>
+    <dimen name="discover_hotsingers_avater_h_w">150px</dimen>
+    <dimen name="discover_hotsongs_avater_h_w">150px</dimen>
+    <dimen name="discover_listenranksongs_avater_h_w">150px</dimen>
+    <dimen name="discover_item_imv_wh">360px</dimen>
+    <dimen name="discover_item_log_w">212px</dimen>
+    <dimen name="discover_item_log_h">86px</dimen>
+    <dimen name="discover_side_letter_bar_letter_size">36px</dimen>
+    <dimen name="discover_side_letter_bar_width">108px</dimen>
+    <dimen name="discover_city_text_size">48px</dimen>
+
+    <!--**********************************播放作品***********************************-->
+    <dimen name="songdetail_fragment_left_topiconsize">60px</dimen>
+    <dimen name="songdetail_fragment_left_bottomiconsize">60px</dimen>
+
+    <!--***********************************学唱**************************************-->
+    <dimen name="learnsing_main_bottomsize">240px</dimen>
+    <dimen name="learnsing_banner_size">615px</dimen>
+    <dimen name="learnsing_search_item_size">165px</dimen>
+    <dimen name="learnsing_album_size">330px</dimen>
+    <dimen name="learnsing_album2_size_w">200px</dimen>
+    <dimen name="learnsing_album2_size_h">100px</dimen>
+    <dimen name="learnsing_practic_img_w_h">144px</dimen>
+    <dimen name="learnsing_practic_song_img_width">160px</dimen>
+    <dimen name="learnsing_ranking_width">120px</dimen>
+    <dimen name="learnsing_top_singername_height">180px</dimen>
+    <dimen name="learnsing_rgbt_bt_w">342px</dimen>
+    <dimen name="learnsing_rgbt_bt_h">108px</dimen>
+    <dimen name="learnsing_singer_avater_size">120px</dimen>
+    <dimen name="learnsing_worklist_avater_h_w">90px</dimen>
+    <dimen name="learnsing_worklist_top_h_w">50px</dimen>
+    <dimen name="learnsing_worklist_seximg_h_w">50px</dimen>
+    <dimen name="learnsing_select_item_margin">24px</dimen>
+    <dimen name="learnsing_select_list_item_margin">20px</dimen>
+
+    <!--************************发布***********************-->
+    <dimen name="toannounce_height">24px</dimen>
+    <dimen name="toannounce_reverb_height">490px</dimen>
+    <dimen name="toannounce_reverb_linewidth">200px</dimen>
+    <dimen name="toannounce_reverb_margin">30px</dimen>
+    <dimen name="toannounce_leaveaword_height">210px</dimen>
+    <dimen name="toannounce_marginright">150px</dimen>
+
+    <!--************************音乐馆**********************************-->
+
+
+    <!--*******************歌手选择***********************************-->
+    <dimen name="singerselect_list_item_margintop">36px</dimen>
+    <dimen name="singerselect_list_item_a">38px</dimen>
+    <dimen name="singerselect_list_item_d">36px</dimen>
+    <dimen name="singerselect_list_item_e">21px</dimen>
+    <dimen name="singerselect_list_item_f">24px</dimen>
+    <dimen name="singerselect_list_item_h">33px</dimen>
+    <dimen name="singerselect_list_item_i">48px</dimen>
+    <!--歌手/歌曲选曲-->
+    <dimen name="singerselect_view_h">27px</dimen>
+    <dimen name="singerselect_view_h_a">72px</dimen>
+    <dimen name="singerselect_view_h_b">90px</dimen>
+    <dimen name="singerselect_view_h_c">54px</dimen>
+    <dimen name="singerselect_view_h_d">105px</dimen>
+    <dimen name="singerselect_view_h_e">135px</dimen>
+    <dimen name="singerselect_view_h_f">33px</dimen>
+    <dimen name="singerselect_view_h_g">10px</dimen>
+    <dimen name="singerselect_view_h_i">15px</dimen>
+
+    <!--***********************************我的*************************************-->
+    <dimen name="mine_production_size">150px</dimen>
+    <dimen name="mine_albumart_size">240px</dimen>
+    <dimen name="mine_mychrous_item_pic_w_h">130px</dimen>
+    <dimen name="mine_grade_size">42px</dimen>
+    <dimen name="mine_local_width">210px</dimen>
+    <dimen name="mine_collect_height">210px</dimen>
+    <!--我的页面字体-->
+    <dimen name="mine_text_size_f">42px</dimen>
+    <dimen name="mine_text_size_g">52px</dimen>
+
+    <!--**********************快速搜索索引**********************-->
+
+    <!--******************************专辑详情页面*******************************-->
+    <dimen name="special_height_b">162px</dimen>
+    <dimen name="special_height_d">42px</dimen>
+
+
+</resources>

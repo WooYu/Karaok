@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_cantata"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_cantata"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <!--标题-->
+        <com.clicktech.snsktv.widget.titlebar.HeaderView
+            android:id="@+id/headerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_medium"
+            app:titleAlpha="0"
+            app:titleLeftImg="@mipmap/arrow_left"
+            app:titleName="@string/selectrole" />
+
+        <!--歌词-->
+        <com.library.multimedia.lyricscontrols.view.LyricOfPreviewImpl
+            android:id="@+id/lrcview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!--合唱第一人：唱红色部分，唱蓝色部分-->
+        <LinearLayout
+            android:id="@+id/ll_chorusfirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/gapsize_d"
+            android:paddingTop="@dimen/gapsize_b"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_chorusblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bg_partblue"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="3dp"
+                android:text="@string/selectrole_chorusblue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_b" />
+
+            <TextView
+                android:id="@+id/tv_chorusred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/gapsize_d"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/shape_bg_partred"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="3dp"
+                android:text="@string/selectrole_chorusred"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_b" />
+
+
+        </LinearLayout>
+
+        <!--合唱第二人：开始合唱-->
+        <LinearLayout
+            android:id="@+id/ll_chorussecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/gapsize_d"
+            android:paddingTop="@dimen/gapsize_b"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_secondchorustip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selectrole_chorustip_blue"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_c" />
+
+            <TextView
+                android:id="@+id/tv_startchorus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_d"
+                android:background="@drawable/shape_bg_startsinging"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="3dp"
+                android:text="@string/selectrole_startchorus"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_b" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

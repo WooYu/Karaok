@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360px"
+    android:layout_height="684px"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
+    android:paddingEnd="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/discover_item_bgimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/def_square_large" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/shape_discover_popsinger_bac" />
+
+        <TextView
+            android:id="@+id/tv_singer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/singer_desc"
+            android:layout_marginStart="@dimen/gapsize_d"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="高桥留美子"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+        <LinearLayout
+            android:id="@+id/singer_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/gapsize_d"
+            android:layout_marginEnd="@dimen/gapsize_d"
+            android:layout_marginStart="@dimen/gapsize_d"
+            android:layout_marginTop="@dimen/typesize_g"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/discover_play_erji" />
+
+            <TextView
+                android:id="@+id/discover_listen_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gapsize_g"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gapsize_b"
+                android:src="@mipmap/discover_play_jiangbei" />
+
+            <TextView
+                android:id="@+id/tv_trophy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gapsize_g"
+                android:maxLines="1"
+                android:text="100"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

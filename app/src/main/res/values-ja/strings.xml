@@ -1,0 +1,577 @@
+<resources>
+    <string name="app_name">Karaok!</string>
+
+    <!--************************欢迎、登录、注册****************************-->
+    <!--欢迎-->
+    <string name="enter_welcome">体験する</string>
+
+    <!--登录-->
+    <string name="enter_slogan_1">&#160;</string>
+    <string name="enter_slogan_2">KaraOk</string>
+    <string name="enter_slogan_3">!</string>
+    <string name="enter_slogan_4">にようこそ</string>
+    <string name="enter_or">もしくは</string>
+    <string name="enter_otherlogin">その他ログイン方法</string>
+    <string name="enter_protocoltip">·《<u>KaraOK！サービス利用規約</u>》に同意する</string>
+    <string name="enter_protocol">利用規約</string>
+
+    <!--注册-->
+    <string name="enter_regist_info">プロフィール変更</string>
+    <string name="enter_regist_info_upavater">サムネイル変更</string>
+    <string name="enter_regist_info_unick">ニックネーム</string>
+    <string name="enter_regist_info_unick_hint">ニックネームを入力してください</string>
+    <string name="enter_regist_info_birthday_hint">生年を選択してください</string>
+    <string name="enter_regist_info_address_hint">国/地域を選択してください</string>
+    <string name="enter_regist_info_submit">OK</string>
+    <string name="enter_nation_cn">中国</string>
+    <string name="enter_nation_jp">日本</string>
+
+    <!--语言-->
+    <string name="language_title">言語切替</string>
+    <string name="language_cn">中国語</string>
+    <string name="language_en">英語</string>
+    <string name="language_jp">日本語</string>
+
+    <!--**********************主界面****************************************-->
+    <string name="main_discover">発見</string>
+
+    <!--***********************首页******************************************-->
+    <!--K2（音乐馆）-->
+    <string name="hall_classfiy">曲名</string>
+    <string name="hall_years_ago">年代</string>
+    <string name="hall_theme">ジャンル</string>
+    <string name="hall_chorus">コラボ</string>
+    <string name="hall_live">ライブ</string>
+    <string name="hall_hotrecom">ホットコメンド</string>
+    <string name="hall_guessyoulike">あなたへのオススメ</string>
+    <string name="hall_newstart">新曲リリース</string>
+    <string name="hall_comment">採点</string>
+    <string name="hall_kge">歌う!</string>
+    <string name="hall_erasure">消音</string>
+
+    <!--搜索-->
+    <string name="search_titlename">検索</string>
+    <string name="search_refer_hint">歌手名/曲名て検索</string>
+    <string name="search_refer_common_singer">定番の歌手</string>
+    <string name="search_refer_empty">検索履歴を削除する</string>
+    <string name="search_result_sorry">申し訳ありません！</string>
+    <string name="search_result_none">関連する結果が見つかりませでした...</string>
+    <string name="search_result_cappella">求める伴奏が見つかりませんか？</string>
+    <string name="search_result_feekback">フィードバックする</string>
+    <string name="search_result_original">オリジナル伴奏</string>
+    <string name="search_result_loadmore">さらに読み込む</string>
+    <string name="search_result_original_end">すべてのオリジナル伴奏がロードされました</string>
+    <string name="search_result_erasure">消音</string>
+    <string name="search_result_frominternet">以下のコンテンツはインターネットからアップロードされています。</string>
+
+    <!--横幅-->
+    <string name="banner_special">過去コラムおすすめ</string>
+
+    <!--歌手选曲-->
+    <string name="singer_selecsongs">歌手名</string>
+    <string name="singer_havesome_singer">歴史記録</string>
+    <string name="singer_all">すべての歌手</string>
+    <string name="singer_popularchorus">人気コラボ</string>
+    <string name="singer_music_all">すべての曲</string>
+    <string name="singer_type">歌手カテゴリ</string>
+    <string name="singer_out">海外歌手</string>
+
+    <!--分类-->
+    <string name="category_all">ジャンル</string>
+    <string name="category_history">歴史記録</string>
+
+    <!--年代-->
+    <string name="year_between_yearbedin">何年から</string>
+    <string name="year_between_yearend">何年まで</string>
+    <string name="year_between_yearbt">この年代の曲をさがす</string>
+    <string name="year_between_year_beg_hint">何年からを選んでください</string>
+    <string name="year_between_year_end_hint">何年までを選んでください</string>
+
+    <!--已点-->
+    <string name="ever_accompaniment">歌った曲</string>
+    <string name="ever_practicing">練習した曲</string>
+
+    <!--清唱-->
+    <string name="cantata_title">アカペラ</string>
+    <string name="cantata_recording">レコーディング中</string>
+    <string name="cantata_play">再生</string>
+    <string name="cantata_pause">モード</string>
+    <string name="cantata_reset">歌い直し</string>
+    <string name="cantata_finish">完成</string>
+    <string name="cantata_editsongname_hint">"コラボ曲名を入力してください "</string>
+
+    <!--合唱列表-->
+    <string name="chorus_recommend">コラボおすすめ</string>
+    <string name="chorus_star">アーティストコラボ</string>
+    <string name="chorus_join">コラボに参加</string>
+    <string name="chorus_participantlist">コラボ参加リスト</string>
+
+    <!--学唱主页-->
+    <string name="learnsing_songword">歌い出し</string>
+    <string name="learnsing_practic">練習</string>
+    <string name="learnsing_mv">MV</string>
+    <string name="learnsing_sing">歌う!</string>
+    <string name="learnsing_chorus">コラボ</string>
+    <string name="learnsing_video_chorus">動画コラボ</string>
+    <string name="learnsing_grade_none">評価はまだありません、良い声を見つけてみよう></string>
+    <string name="learnsing_friendrank">フレンドランキング</string>
+    <string name="learnsing_nationrank">全国ランキング</string>
+    <string name="learnsing_friends_champion">フレンドチャンピオン</string>
+
+    <!--K歌界面-->
+    <string name="ksong">歌う</string>
+    <string name="ksong_pause">モード</string>
+    <string name="ksong_play">モード</string>
+    <string name="ksong_original">原唱</string>
+    <string name="ksong_tone">キー変更</string>
+    <string name="ksong_reset">歌い直す</string>
+    <string name="ksong_over">完了</string>
+    <string name="ksong_time_initial">00:00</string>
+    <string name="ksong_switchmode">モード</string>
+    <string name="ksong_midvoice">ガイド♪</string>
+
+    <!--待发布界面-->
+    <string name="tobeanno_titlename">設定保存</string>
+    <string name="tobeanno_voice">音量バランス</string>
+    <string name="tobeanno_voicevol">ヴォーカル</string>
+    <string name="tobeanno_accvol">演奏</string>
+    <string name="tobeanno_reverb">音響シミュレーション</string>
+    <string name="tobeanno_reverb_recordroom">屋内ライブステージ１</string>
+    <string name="tobeanno_reverb_ktv">屋内ライブステージ２</string>
+    <string name="tobeanno_reverb_warmth">屋内ライブステージ３</string>
+    <string name="tobeanno_reverb_magnetism">屋内ライブステージ４</string>
+    <string name="tobeanno_reverb_clear">屋内ライブステージ５</string>
+    <string name="tobeanno_reverb_distant">屋内ライブステージ６</string>
+    <string name="tobeanno_reverb_3d">屋内ライブステージ７</string>
+    <string name="tobeanno_reverb_oldrecord">屋内ライブステージ８</string>
+    <string name="tobeanno_inflexion">ボイスチェンジ</string>
+    <string name="tobeanno_inflexion_original">なし</string>
+    <string name="tobeanno_inflexion_emusic">ロボット</string>
+    <string name="tobeanno_inflexion_croaking">ケロケロ</string>
+    <string name="tobeanno_inflexion_male">男声</string>
+    <string name="tobeanno_inflexion_female">女声</string>
+    <string name="tobeanno_remake">歌い直す</string>
+    <string name="tobeanno_addavideo">ビデオ追加</string>
+    <string name="tobeanno_announce">公開</string>
+    <string name="tobeanno_save">セーブ</string>
+    <string name="tobeanno_voicemove">ボーカル調整</string>
+
+    <!--打分结果-->
+    <string name="score_synthetical">総合得点</string>
+    <string name="score_synthetical_unit">点</string>
+    <string name="score_tone">音程</string>
+    <string name="score_accuracy">正確さ</string>
+    <string name="score_stability">安定性</string>
+    <string name="score_stability_left">震える</string>
+    <string name="score_stability_right">まっすぐ</string>
+    <string name="score_rhythm">リズム</string>
+    <string name="score_rhythm_left">走る</string>
+    <string name="score_rhythm_right">タメる</string>
+    <string name="score_longsound_trill">ロングトーン&#038;ビブラート</string>
+    <string name="score_longsound">ロングトーン</string>
+    <string name="score_trill">ビブラート</string>
+    <string name="score_expression">表現力</string>
+
+    <!--发布-->
+    <string name="announce">公開</string>
+    <string name="announce_finish">完成</string>
+    <string name="announce_change">変更</string>
+    <string name="announce_changetip">背景を選択し写真を変更</string>
+    <string name="announce_leaveaword_hint">歌いました！みんな聴いてね！</string>
+    <string name="announce_dvd">アルバムに追加</string>
+    <string name="announce_secrettoupload">プライベートアップロード</string>
+    <string name="announce_secrettoupload_hint">情報を他SNSへシェア</string>
+    <string name="announce_share">同期させる</string>
+    <string name="announce_photoalbum">アルバム</string>
+    <string name="announce_camera">写真を撮る</string>
+    <string name="announce_cancel">削除</string>
+    <string name="announce_worksnorelease">前の画面に戻りますか？</string>
+    <string name="announce_quit">終了する</string>
+
+    <!--**************************************我的****************************-->
+    <string name="mine_production">作品</string>
+    <string name="mine_fans">ファン</string>
+    <string name="mine_attention">フォロー</string>
+    <string name="mine_give">プレゼントを贈る</string>
+    <string name="mine_comment">コメント</string>
+    <string name="mine_transmit">シェア</string>
+    <string name="mine_needlogin">未ログイン</string>
+    <string name="mine_attention_btn">フォロー</string>
+    <string name="mine_hot_btn">人気</string>
+    <string name="mine_item_attention_btn">+ フォロー</string>
+    <string name="mine_playlist_inorder">順番に再生</string>
+    <string name="mine_playlist_close">閉じる</string>
+
+    <string name="mine_attention_ok">フォロー済</string>
+    <string name="mine_attention_no">フォロー</string>
+
+    <string name="mine_workslist_title">作品</string>
+    <string name="mine_attentiondialog_cancle">フォロワーを削除しますか</string>
+    <string name="mine_attentiondialog_add">フォローしますか</string>
+
+    <string name="mine_mytracks_title">履歴</string>
+    <string name="mine_mytracks_history_singed">歌った曲</string>
+    <string name="mine_mytracks_local_play">未公開リスト</string>
+    <string name="mine_mytracks_my_chorusplay">コラボ履歴</string>
+    <string name="mine_mytracks_chorusplayeduser">参加リスト</string>
+    <string name="mine_mytracks_listen_history">再生履歴</string>
+    <string name="mine_mytracks_my_collection">お気に入り</string>
+
+    <string name="mine_mychroussongs">我的伴奏</string>
+    <string name="mine_mychroussongs_item_canyu">参加者</string>
+    <string name="mine_myhistorysounds_ok">歌った曲</string>
+    <string name="mine_myhistorysounds_learn">練習した曲</string>
+
+    <string name="mine_attention_need_login_text">ログイン情報</string>
+
+    <!--消息-->
+    <string name="news_titlename">メッセージ</string>
+    <string name="news_letter">プライベートメッセージ</string>
+    <string name="news_audience">最近のリスナー</string>
+    <string name="news_gift">プレゼントリスト</string>
+    <string name="news_sysmsg">お知らせ</string>
+    <string name="news_comment_attention">フォローワーから</string>
+    <string name="news_comment_disconcern">フォローワー以外から</string>
+    <string name="news_comment_reply">コメント</string>
+    <string name="news_exchangeflowers">花を交換</string>
+    <string name="listener_visithome">ホームページへ</string>
+    <string name="listener_visitwork">作品リスナ</string>
+
+    <!--设置-->
+    <string name="setting_titlename">設定</string>
+    <string name="setting_datum">プロフィール</string>
+    <string name="setting_accredit">SNS認証情報</string>
+    <string name="setting_unauthorized">不正な</string>
+    <string name="setting_findfriends">フレンド検索</string>
+    <string name="setting_datum_edit">プロフィール変更</string>
+    <string name="setting_datum_finish">セーブ</string>
+    <string name="setting_datum_album">アルバム</string>
+    <string name="setting_datum_nick">ニックネーム</string>
+    <string name="setting_datum_sex">性别</string>
+    <string name="setting_datum_sex_man">男</string>
+    <string name="setting_datum_sex_female">女</string>
+    <string name="setting_datum_birthday">誕生日</string>
+    <string name="setting_datum_sns">ログイン方法について</string>
+    <string name="setting_datum_id">ID</string>
+    <string name="setting_datum_language">言語</string>
+    <string name="setting_datum_area">地域</string>
+    <string name="setting_inform">通知設定</string>
+    <string name="setting_inform_switch">受信</string>
+    <string name="setting_inform_switch_all">すべてメッセージを受信</string>
+    <string name="setting_inform_switch_friend">フレンドのメッセージのみ受信</string>
+    <string name="setting_inform_switch_none">メッセージを受信しない</string>
+    <string name="setting_inform_warmingtone">着信音</string>
+    <string name="setting_inform_vibra">バイブレーション</string>
+    <string name="setting_network_tip">Wi-Fiリマインダー</string>
+    <string name="setting_network_nowifi">Wi-Fi切断時のお知らせ</string>
+    <string name="setting_network_every">毎回</string>
+    <string name="setting_network_switching">切り替え時</string>
+    <string name="setting_network_noprompt">リマインドしない</string>
+    <string name="setting_other">その他</string>
+    <string name="setting_other_leadsinger">オフィシャル歌手申請</string>
+    <string name="setting_other_wipecache">キャッシュクリア</string>
+    <string name="setting_wipecache_accompany">伴奏データ</string>
+    <string name="setting_wipecache_recording">未公開リスト</string>
+    <string name="setting_wipecache_workcache">作品視聴と公開キャッシュ</string>
+
+    <string name="setting_wipecache_delet">削除</string>
+    <string name="setting_other_feedback">フィードバック</string>
+    <string name="setting_feekback_uploadimg">写真アップロード</string>
+    <string name="setting_feekback_tip">貴重なご意見をいただき、より良いサービスを提供できるようにご協力をお願い致します。</string>
+    <string name="setting_feedback_commit">提出する</string>
+    <string name="setting_feedback_hint">こちらに書いてください。</string>
+    <string name="setting_other_update">アップデートを確認</string>
+    <string name="setting_ohter_about">Clicktech社のアプリ</string>
+    <string name="setting_about_grade">レビューーする</string>
+    <string name="setting_about_function">機能説明</string>
+    <string name="setting_quit">ログアウト</string>
+
+    <!--举报-->
+    <string name="inform_title">報告する</string>
+    <string name="inform_type">通報の種類</string>
+    <string name="inform_harass">出会い目的</string>
+    <string name="inform_advert">広告・営業</string>
+    <string name="inform_swindle">詐欺・ネットワークビジネス</string>
+    <string name="inform_sexy">性的な内容</string>
+    <string name="inform_violence">暴力</string>
+    <string name="inform_reaction">公序良俗に反する内容</string>
+    <string name="inform_stolensong">盗用</string>
+    <string name="inform_pyramidsale">传销</string>
+    <string name="inform_other">その他</string>
+    <string name="inform_screentshot">スクリーンショットを送る</string>
+    <string name="inform_caption">+ 通報内容詳細</string>
+    <string name="inform_reportdesc">報告内容を書く(100文字内)</string>
+    <string name="inform_reportdesc_hint">報告内容を入力してください</string>
+    <string name="inform_sure">OK</string>
+
+    <!--K币-->
+    <string name="kcoin_title">Kコイン購入</string>
+    <string name="kcoin_buy">購入</string>
+
+    <!--******************************发现******************************************-->
+    <string name="find_national_rank">全国</string>
+    <string name="find_rank">ランキング</string>
+    <string name="find_listener_rank">人気ランキング</string>
+    <string name="find_hot_singer">人気の歌手</string>
+    <string name="find_hot_songs">人気の曲</string>
+    <string name="find_moreclick">見る ></string>
+    <string name="find_richlist">プレゼントランキング</string>
+    <string name="find_richlis">プレゼント</string>
+    <string name="find_friendrank">フレンドランキング</string>
+    <string name="find_friend">フレンド</string>
+    <string name="find_friendrank_week_playcount">週間再生ランキング：</string>
+    <string name="find_friendrank_week0">今週</string>
+    <string name="find_friendrank_week1">先週</string>
+    <string name="find_friendrank_week2">2週間前</string>
+    <string name="find_friendrank_week3">3週間前</string>
+    <string name="find_friendrank_week4">一ケ月前</string>
+
+    <string name="find_all">全て</string>
+    <string name="find_share">シェア</string>
+    <string name="find_changecity">地域選択</string>
+    <string name="find_selectcountry">国の選択</string>
+    <string name="find_searchcity">町検索</string>
+    <string name="find_curcity">表示町</string>
+    <string name="find_allcity">地域一覧</string>
+    <string name="find_national">全国ランキング</string>
+    <string name="find_national_rule">1時間内に人気の上昇ランキング</string>
+    <string name="find_richlist_rule">Kコイン使用量ランキング</string>
+    <string name="find_rich_newjinbang">新着ランキング</string>
+    <string name="find_rich_daylist">日間ランキング</string>
+    <string name="find_rich_totallist">総合ランキング</string>
+
+    <!--城市定位-->
+    <string name="cp_changecity_title">地域変更</string>
+    <string name="cp_search_hint">地名またはローマ字を入力してください</string>
+    <string name="cp_searchresult_none">検索結果なし~</string>
+    <string name="cp_hot_city">人気地域</string>
+    <string name="cp_located_city">町ナビ</string>
+    <string name="cp_locating">ナビ中…</string>
+    <string name="cp_located_failed">位置取得できませんでした</string>
+
+    <!--歌手介绍-->
+    <string name="singerintro_chorus">コラボ</string>
+    <string name="singerintro_special">アルバム</string>
+    <string name="singerintro_album">フォトアルバム</string>
+    <string name="singerintro_edit">編集</string>
+    <string name="singerintro_noworks">まだ作品がありません</string>
+    <string name="singerintro_nosingle">作品を追加してみよう！</string>
+
+    <!--专辑-->
+    <string name="album_make">アルバム作成</string>
+    <string name="album_desc_hint">新規アルバムをしました。みんな聞いてね</string>
+    <string name="album_songs">アルバム曲</string>
+    <string name="album_songs_limit">(少なくとも５曲選んでください,最大１０曲までとなります)</string>
+    <string name="album_addsong">曲を追加</string>
+    <string name="album_issue">公開</string>
+    <string name="album_single">シングル</string>
+    <string name="album_playall">すべて再生</string>
+    <string name="album_giftrank">プレゼントランキング</string>
+    <string name="album_nogifts">コメントありません</string>
+    <string name="album_comment">コメント</string>
+    <string name="album_addsingle">曲を追加</string>
+
+    <!--收藏-->
+    <string name="enshrine_nodata">お気に入りに登録されていません！</string>
+
+    <!--歌曲详情-->
+    <string name="songdetail_comment">コメント</string>
+    <string name="songdetail_share">シェア</string>
+    <string name="songdetail_join">歌う!</string>
+    <string name="songdetail_collect">お気に入り</string>
+    <string name="songdetail_gifts">プレゼント</string>
+
+    <string name="songdetail_songrank">曲ランキング</string>
+    <string name="songdetail_commentlist">コメントリスト</string>
+    <string name="songdetail_more"><![CDATA[もっと >]]></string>
+    <string name="songdetail_inputcomment_hint">コメントを入力してください</string>
+
+    <!--礼物-->
+    <string name="gift_ranktitle">プレゼントランキング</string>
+    <string name="gift_none">まだプレゼントを贈りません</string>
+    <string name="gift_givegifts">プレゼントを贈る</string>
+    <string name="gift">プレゼント</string>
+    <string name="gift_num_hint">贈る数字の入力</string>
+    <string name="gift_sendgift">プレゼントを贈る</string>
+
+
+    <!--合唱:选择角色-->
+    <string name="selectrole">パート選択</string>
+    <string name="selectrole_chorustip_blue">青パートを歌う</string>
+    <string name="selectrole_chorustip_red">赤パートを歌う</string>
+    <string name="selectrole_startchorus">歌い直す</string>
+    <string name="selectrole_chorusred">赤パートをを歌う</string>
+    <string name="selectrole_chorusblue">青パートを歌う</string>
+
+    <!--合唱：录制MV预览-->
+    <string name="mvpreview">动画设定</string>
+    <string name="mvpreview_template">模板</string>
+    <string name="mvpreview_template1">标准</string>
+    <string name="mvpreview_template2">独占</string>
+    <string name="mvpreview_template3">前后</string>
+    <string name="mvpreview_filter">フィルタ</string>
+    <string name="mvpreview_filter1">原创</string>
+    <string name="mvpreview_filter2">奶油</string>
+    <string name="mvpreview_filter3">月光</string>
+    <string name="mvpreview_filter4">莫斯科</string>
+    <string name="mvpreview_filter5">云雀</string>
+    <string name="mvpreview_filter6">美肌</string>
+    <string name="mvpreview_filter7">抹茶</string>
+    <string name="mvpreview_filter8">奈良</string>
+    <string name="mvpreview_startrecord">开始录制</string>
+    <string name="mvpreview_filter_name">美肤效果</string>
+
+    <!--**********************选择图片****************************************-->
+    <string name="title_choosepic_hint">画像を選択する</string>
+
+    <!--******************************发现页面*******************************-->
+    <string name="popu_singer">人気の歌手</string>
+    <string name="popu_song">人気の曲</string>
+
+
+    <!--****************************StringFormat************************************-->
+    <string name="format_photonum">%s枚</string>
+    <string name="format_unitofsinglenum">%s曲</string>
+    <string name="format_listencount">%1$sリスナー</string>
+    <string name="format_commentcount">%1$sコメント</string>
+    <string name="format_class">Lv%d</string>
+    <string name="format_numofimagesselected">%d枚選択済</string>
+    <string name="format_giftsstatistics">%1$dフラワーと%2$dKC贈った</string>
+    <string name="format_chorusnumber">コラボ%s回</string>
+    <string name="format_album_comment">コメント%s</string>
+    <string name="format_album_gift">プレゼント%s</string>
+    <string name="format_listeningtimesoftoday">本日の視聴回数：%s</string>
+    <string name="format_listeningtimesoftotal">累計視聴回数：%s</string>
+    <string name="format_exchangeable_flowers">交換可花%s</string>
+    <string name="format_numofalbum">アルバム(%1$d/%2$d)</string>
+    <string name="format_singleofablum">シングル%s</string>
+    <string name="format_commentofalbum">コメント%s</string>
+    <string name="format_giftsofalbume">プレゼント%s</string>
+    <string name="format_numofsingle">シングル(%d曲)</string>
+    <string name="format_kcoin">%dKC</string>
+    <string name="format_nationaverage">全国平均：%1$s点（%2$s）</string>
+    <string name="format_trillsound">合计：%1$s秒/%2$s回</string>
+    <string name="format_age">%s歳</string>
+    <string name="format_listencomment">%1$s視聴 %2$sコメント</string>
+    <string name="format_collectcomment">%1$sお気に入り %2$sコメント</string>
+    <string name="format_num_totalsingle">総%s曲</string>
+    <string name="format_single_album">確定（%1$d/%2$d）</string>
+    <string name="format_worktitle">%sの作品</string>
+    <string name="format_contribution">%1$dKCと%2$dフラワー贈った</string>
+    <string name="format_numofflowers">花x%s</string>
+    <string name="format_playlist_sum">(%s曲)</string>
+    <string name="format_filesize">%.2fM</string>
+
+    <!--****************************成功提示********************************-->
+    <string name="tip_comment">コメントしました</string>
+    <string name="tip_attent">フォローしました</string>
+    <string name="tip_attent_cancel">フォローを削除しました</string>
+    <string name="tip_collect">お気に入りに登録しました</string>
+    <string name="tip_collect_cancel">お気に入りを削除しました</string>
+    <string name="tip_nonsupport_chorus">コラボに対応していません</string>
+    <string name="tip_sendflowers">花を贈りました</string>
+    <string name="tip_receivemsg">メッセージ受取る変更成しました</string>
+    <string name="tip_avatar_modifiy">プロフィール変更しました</string>
+    <string name="tip_unopened_function">準備中</string>
+    <string name="tip_cantata_nonsupport_mv">コラボに追加できません</string>
+    <string name="tip_photo_uploadsuccess">画像アップロードしました</string>
+    <string name="tip_photo_deletsuccess">画像削除しました</string>
+    <string name="tip_respond_success">返事しました</string>
+    <string name="tip_sendgifts">プレゼント贈りました</string>
+    <string name="tip_report">報告を送信しました</string>
+    <string name="tip_delete_success">削除しました</string>
+    <string name="tip_success_albumcreate">アルバム作成しました</string>
+    <string name="tip_voicesearch_uninstalled">未找到语言搜索的相关服务！</string>
+    <string name="tip_voicesearch_hint">开始识别</string>
+    <string name="tip_share_success">シェアしました！</string>
+    <string name="tip_share_failed">シェアできませんでした！</string>
+    <string name="tip_share_cancel">シェアをキャンセルしました！</string>
+    <string name="tip_share_clientvalid">アプリインストールしてください</string>
+    <string name="tip_cantata_songname">请输入清唱歌曲名字！</string>
+    <string name="tip_touchlyric">クリックし引き続きレコーディングする!</string>
+
+    <!--******************************错误提示*******************************-->
+    <string name="error_notlogin">ログインしてください</string>
+    <string name="error_dataexception">データ不具合発生しました</string>
+    <string name="error_nocomment">コメントを入力してください</string>
+    <string name="error_withoutrecord">レコーディングしてください</string>
+    <string name="error_recordtime">レコーディングを完了するために１５秒以上歌ってください</string>
+    <string name="error_recordmvtime">レコーディングを完了するために３０秒以上歌ってください</string>
+    <string name="error_lyricexception">歌詞読込不具合発生しました</string>
+    <string name="error_lyricdownfail">歌詞読込失敗しました</string>
+    <string name="error_accompany_notfound">伴奏を見つかりませんでした</string>
+    <string name="error_accompany_downfail">伴奏ダウンロード失敗しました</string>
+    <string name="error_chorusvideo_notfound">コラボを見つかりませんでした</string>
+    <string name="error_chorusvideo_downfail">コラボダウンロード失敗しました</string>
+    <string name="error_getuserinfo">ユーザー情報の取得まだ対応しません</string>
+    <string name="error_nohead">サムネイル変更</string>
+    <string name="error_downloadfailed_song">曲ダウンロード失敗しました</string>
+    <string name="error_videofailedtoload">読込できませんでした</string>
+    <string name="error_clickretry">クリックしてもう一度お試しください</string>
+    <string name="error_recordall">コラボを完了するために曲全体歌ってください</string>
+    <string name="error_singlelimit">最少5曲,最大10曲</string>
+    <string name="error_input_albumname">アルバム名を入力してください</string>
+    <string name="error_input_albumdesc">アルバムの説明を入力してください</string>
+    <string name="error_select_albumpicture">アルバム画像を選択してください</string>
+    <string name="error_not_sufficient_funds">KCが足りません</string>
+    <string name="error_not_flower">花が足りません</string>
+    <string name="error_not_languagenvir">言語を選択してください</string>
+    <string name="error_year_notlegal">正しい年代を選択してください</string>
+    <string name="error_downfile_mid">採点用ファイルの読込失敗</string>
+
+    <!--**********************对话框提示****************************-->
+    <string name="dialog_rerecord">歌い直しますか</string>
+    <string name="dialog_pauserecord">一時的に休止しますか</string>
+    <string name="dialog_continuerecord">レコーディング再開しますか</string>
+    <string name="dialog_finishrecord">レコーディング終了しますか</string>
+    <string name="dialog_addvideo">ビデオを追加しますか</string>
+    <string name="dialog_savework">保存的作品属于未公开，セーブしますか</string>
+    <string name="dialog_rerecord_left">キャンセル</string>
+    <string name="dialog_rerecord_right">OK</string>
+    <string name="dialog_pleasewait">しばらくお待ちください</string>
+    <string name="dialog_cantata_resetsong">歌い直しますか</string>
+    <string name="dialog_cantata_finish">レコーディング完了しますか</string>
+    <string name="dialog_cantata_back">前の画面に戻りますか？</string>
+    <string name="dialog_practice_finish">練習完了、も一度しますか</string>
+    <string name="dialog_cancel">キャンセル</string>
+    <string name="dialog_sure">OK</string>
+    <string name="dialog_publishworks">公開しますか</string>
+    <string name="dialog_close">閉じる</string>
+    <string name="dialog_tip">通知</string>
+    <string name="dialog_content">画像を削除しますか</string>
+    <string name="dialog_album_title">方法選択</string>
+    <string name="dialog_addvideo_reset">歌った曲を保存しませんが、もう一度録画しますか</string>
+    <string name="dialog_practice_ready">轻触歌词开始练习！</string>
+    <string name="dialog_practice_audition">是否试听已录制的部分？</string>
+    <string name="dialog_practice_reset">是否结束试听，重新开始录制？</string>
+
+    <!--******************************权限***********************************-->
+    <string name="permiss_necessary">メディアライブラリへのアクセスするためにはメディアライブラリの使用を許可してください</string>
+    <string name="permiss_recordaudio">メディアライブラリ、録音へのアクセスするためにはメディアライブラリ、録音の使用を許可してください</string>
+    <string name="permiss_recordmv">録画するためにはカメラの使用を許可してください</string>
+    <string name="permiss_changephoto">フォトライブラリへのアクセスするためにはフォトライブラリの使用を許可してください</string>
+
+    <string name="nolyricdata">歌詞ありません</string>
+    <string name="all_images">全ての画像</string>
+    <string name="folder_image_count">総%1$d枚</string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="select_limit">最大%1$s枚まで</string>
+    <string name="complete">Ok</string>
+    <string name="select_complete">完了(%1$s/%2$s)</string>
+    <string name="preview_count">プレビュー(%1$s)</string>
+    <string name="photo_crop">画像編集</string>
+    <string name="origin">元画像</string>
+    <string name="origin_size">元画像(%1$s)</string>
+
+    <!--**************************特殊符号**********************************-->
+    <!--其它#-->
+    <string name="symbol_other">&#035;</string>
+    <string name="symbol_and">&#038;</string>
+    <!--游戏币单位-->
+    <string name="symbol_kcoin_unit">KC</string>
+    <!--分-->
+    <string name="symbol_unit_minute">分</string>
+    <!--秒-->
+    <string name="symbol_unit_second">秒</string>
+
+</resources>

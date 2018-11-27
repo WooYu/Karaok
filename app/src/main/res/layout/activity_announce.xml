@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F6F6"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <!--标题-->
+        <com.clicktech.snsktv.widget.titlebar.HeaderView
+            android:id="@+id/headerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleLeftImg="@mipmap/arrow_left"
+            app:titleName="@string/announce"
+            app:titleRightText="@string/announce_finish" />
+
+        <!--清唱名字-->
+        <EditText
+            android:id="@+id/et_songname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/cantata_editsongname_hint"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/gapsize_c"
+            android:paddingEnd="@dimen/gapsize_d"
+            android:paddingStart="@dimen/gapsize_d"
+            android:paddingTop="@dimen/gapsize_c"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/typesize_d"
+            android:visibility="gone" />
+
+        <!--歌曲图片-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/iv_blurrysongpicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="#33000000" />
+
+            <!--专辑图片-->
+            <RelativeLayout
+                android:id="@+id/rl_change"
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gapsize_d">
+
+                <ImageView
+                    android:id="@+id/iv_songpicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/def_square_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#77000000"
+                    android:gravity="center"
+                    android:padding="@dimen/gapsize_g"
+                    android:text="@string/announce_change"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/typesize_d" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_change"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gapsize_d"
+                android:text="@string/announce_changetip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_d" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/gapsize_d">
+
+            <!--专辑图片、评论、表情-->
+
+            <!--评论、表情、字数限制-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toannounce_leaveaword_height"
+                android:orientation="vertical">
+
+                <!--评论-->
+                <EditText
+                    android:id="@+id/et_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="@string/announce_leaveaword_hint"
+                    android:maxLength="140"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <!--表情、字数-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/announce_smilies"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_wordsnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0/140" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line_1dp" />
+
+        <!--私密上传-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapsize_a"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/gapsize_d">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/announce_secret" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gapsize_d">
+
+                <TextView
+                    android:id="@+id/tv_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/announce_secrettoupload"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/typesize_c" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_upload"
+                    android:layout_marginRight="@dimen/toannounce_marginright"
+                    android:layout_marginTop="@dimen/gapsize_d"
+                    android:text="@string/announce_secrettoupload_hint"
+                    android:textColor="@color/text_light" />
+
+                <Switch
+                    android:id="@+id/switch_public"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/arrow_right_small" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--加入专辑-->
+        <RelativeLayout
+            android:id="@+id/rl_special"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gapsize_d"
+            android:layout_marginTop="@dimen/gapsize_a"
+            android:background="@color/white"
+            android:padding="@dimen/gapsize_d">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/announce_dvd"
+                android:drawablePadding="@dimen/gapsize_d"
+                android:text="@string/announce_dvd"
+                android:textColor="@color/text_dark" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/arrow_right_small" />
+        </RelativeLayout>
+
+        <!--分享到-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapsize_d"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/gapsize_d"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/announce_share"
+                android:textColor="@color/text_medium"
+                android:textSize="@dimen/typesize_d" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gapsize_d"
+                android:src="@mipmap/announce_weibo" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

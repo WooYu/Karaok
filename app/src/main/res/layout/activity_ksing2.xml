@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mv_bg"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/iv_topbg"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_alignTop="@id/intonationview"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_ksing" />
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_medium"
+        app:titleAlpha="0"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/ksong" />
+
+    <!--已录制时长、歌曲时长-->
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerview"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gapsize_f"
+        android:paddingLeft="@dimen/gapsize_d"
+        android:paddingRight="@dimen/gapsize_d"
+        android:paddingTop="@dimen/gapsize_d">
+        <!--已录制时长-->
+        <TextView
+            android:id="@+id/tv_curtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ksong_time_initial"
+            android:textColor="@color/gainsboro"
+            android:textSize="@dimen/typesize_d" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="27px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/gapsize_f"
+            android:layout_marginRight="@dimen/gapsize_f"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/layer_progress_red" />
+
+        <TextView
+            android:id="@+id/tv_totaltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ksong_time_initial"
+            android:textColor="@color/gainsboro"
+            android:textSize="@dimen/typesize_d" />
+    </LinearLayout>
+
+    <!--音准器-->
+    <com.library.multimedia.soundercontrols.IntonationView
+        android:id="@+id/intonationview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_progress" />
+
+    <!--5秒倒计时-->
+    <com.clicktech.snsktv.widget.animaoftiming.DotCountDownView
+        android:id="@+id/dotView"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/intonationview" />
+
+    <!--模式、变调、重录、结束-->
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_d">
+        <!--录歌模式:练唱、录MV、录合唱、录视频合唱-->
+
+        <!--原唱、伴唱、智能-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableTop="@mipmap/ksong_original"
+            android:gravity="center"
+            android:text="@string/ksong_original"
+            android:visibility="gone" />
+
+        <!--播放、暂停-->
+        <TextView
+            android:id="@+id/tv_mppaused"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableTop="@mipmap/ksong_switchmode"
+            android:gravity="center"
+            android:text="@string/ksong_switchmode"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_tone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableTop="@mipmap/ksong_tone"
+            android:gravity="center"
+            android:text="@string/ksong_tone"
+            android:textColor="@color/white" />
+
+        <!--音量-->
+        <TextView
+            android:id="@+id/tv_midvoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableTop="@mipmap/midsound_1_normal"
+            android:gravity="center"
+            android:text="@string/ksong_midvoice"
+            android:textColor="@color/white" />
+
+
+        <!--重录-->
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableTop="@mipmap/ksong_remake"
+            android:gravity="center"
+            android:text="@string/ksong_reset"
+            android:textColor="@color/white" />
+
+        <!--结束-->
+        <TextView
+            android:id="@+id/tv_over"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableTop="@mipmap/ksong_over"
+            android:gravity="center"
+            android:text="@string/ksong_over"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom"
+        android:layout_below="@id/iv_topbg">
+
+        <ImageView
+            android:id="@+id/iv_externallink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/iv_cover"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/ksong_googlelink_white" />
+
+        <TextView
+            android:id="@+id/tv_singername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@id/iv_cover"
+            android:layout_toStartOf="@id/iv_externallink"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e"
+            tools:text="歌手名称" />
+
+        <TextView
+            android:id="@+id/tv_singname"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_singername"
+            android:layout_alignStart="@id/iv_cover"
+            android:layout_toStartOf="@id/iv_externallink"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e"
+            tools:text="歌曲名称" />
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tv_singname"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/def_square_large" />
+
+        <!--歌词展开背景-->
+        <View
+            android:id="@+id/view_expandbg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--功能：点击跳转到itunes-->
+        <View
+            android:id="@+id/view_externallink"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@id/iv_externallink"
+            android:layout_alignStart="@id/iv_externallink"
+            android:layout_alignTop="@id/iv_externallink" />
+    </RelativeLayout>
+
+    <!--功能：点击展开/折叠歌词-->
+    <View
+        android:id="@+id/view_control_expandfold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_topbg"
+        android:layout_below="@id/dotView" />
+
+    <!--歌词-->
+    <RelativeLayout
+        android:id="@+id/rl_lyric"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/iv_topbg"
+        android:layout_below="@id/dotView">
+
+        <com.library.multimedia.lyricscontrols.view.LyricOfChorusImpl
+            android:id="@+id/lyricofchorus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.library.multimedia.lyricscontrols.view.LyricOfSingleImpl
+            android:id="@+id/lyricofsingle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

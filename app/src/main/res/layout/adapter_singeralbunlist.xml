@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="330px"
+    android:layout_height="330px"
+    android:layout_marginBottom="13px"
+    android:layout_marginLeft="9px"
+    android:layout_marginRight="9px"
+    android:layout_marginTop="13px"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:layout_auto_basewidth="height">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="330px"
+        android:layout_height="330px"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/def_square_large" />
+
+    <ImageView
+        android:id="@+id/iv_pitchon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="18px"
+        android:layout_marginRight="18px"
+        android:src="@mipmap/album_check"
+        android:visibility="gone" />
+
+</RelativeLayout>

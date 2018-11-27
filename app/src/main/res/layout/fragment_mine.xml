@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlebar_bg"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <cn.bingoogolapple.refreshlayout.BGAStickyNavLayout
+            android:id="@+id/mybagnavlayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:fillingheight="@dimen/statusbar_view_height">
+
+            <!--顶部布局-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp">
+
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/banner_zoomStack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:banner_isNumberIndicator="true"
+                    app:banner_numberIndicatorBackground="@android:color/transparent"
+                    app:banner_numberIndicatorTextColor="@android:color/transparent"
+                    app:banner_placeholderDrawable="@mipmap/bg_mine_album"
+                    app:banner_pointAutoPlayAble="true"
+                    app:banner_pointContainerBackground="@android:color/transparent"
+                    app:banner_tipTextColor="@android:color/transparent"
+                    app:banner_transitionEffect="fade" />
+
+                <LinearLayout
+                    android:id="@+id/ll_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--设置、消息、分享-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/statusbar_view_height">
+                        <!--设置-->
+                        <ImageView
+                            android:id="@+id/iv_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:src="@mipmap/mine_setting" />
+
+                        <!--账户-->
+                        <ImageView
+                            android:id="@+id/iv_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingEnd="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:src="@mipmap/mine_account" />
+
+                        <!--通知-->
+                        <cn.bingoogolapple.badgeview.BGABadgeImageView
+                            android:id="@+id/iv_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/iv_account"
+                            android:paddingEnd="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:src="@mipmap/mine_msg" />
+
+                        <!--足迹-->
+                        <ImageView
+                            android:id="@+id/iv_mytracks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/iv_msg"
+                            android:paddingEnd="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:src="@mipmap/mine_mytracks" />
+                    </RelativeLayout>
+
+                    <!--头像、昵称、性别、年龄、地点-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp"
+                        android:paddingEnd="12dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="8dp">
+                        <!--头像-->
+                        <ImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="57dp"
+                            android:layout_height="57dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/def_avatar_round_light"
+                            app:layout_auto_basewidth="height" />
+
+                        <TextView
+                            android:id="@+id/tv_notlogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/gapsize_d"
+                            android:layout_marginStart="@dimen/gapsize_d"
+                            android:gravity="center_vertical"
+                            android:text="@string/mine_needlogin"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_c"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_logged"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/gapsize_d"
+                            android:layout_marginStart="@dimen/gapsize_d"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <!--昵称、等级-->
+                            <LinearLayout
+                                android:id="@+id/ll_nick_grade"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_username"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/typesize_c"
+                                    tools:text="猕猴桃this" />
+
+                                <ImageView
+                                    android:id="@+id/iv_grade"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginEnd="@dimen/gapsize_h"
+                                    android:layout_marginStart="@dimen/gapsize_f" />
+
+                                <TextView
+                                    android:id="@+id/tv_grade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/typesize_c"
+                                    tools:text="Lv0" />
+                            </LinearLayout>
+
+                            <!--性别、年龄、地点-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/gapsize_g"
+                                android:layout_marginTop="@dimen/gapsize_g"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+                                <!--性别-->
+                                <ImageView
+                                    android:id="@+id/iv_sex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <!--岁数-->
+                                <TextView
+                                    android:id="@+id/tv_age"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/gapsize_f"
+                                    android:layout_marginStart="@dimen/gapsize_g"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/typesize_c"
+                                    tools:text="23岁" />
+
+                                <!--地点-->
+                                <TextView
+                                    android:id="@+id/tv_addr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/typesize_c"
+                                    tools:text="北京昌平" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--作品、粉丝、关注、好友-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <!--作品-->
+                        <LinearLayout
+                            android:id="@+id/ll_works"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_works"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/typesize_e" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mine_production"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/typesize_f" />
+                        </LinearLayout>
+
+                        <!--分割线-->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <!--粉丝-->
+                        <LinearLayout
+                            android:id="@+id/ll_fans"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_fans"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/typesize_e" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mine_fans"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/typesize_f" />
+                        </LinearLayout>
+
+                        <!--分割线-->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <!--关注-->
+                        <LinearLayout
+                            android:id="@+id/ll_attention"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_attention"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/typesize_e" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mine_attention"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/typesize_f" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/bg_mine_camber" />
+
+            </RelativeLayout>
+
+            <!--中间布局：关注、热门-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+                    android:id="@+id/rg_works"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/mine_head_bac"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/gapsize_f">
+
+                    <RadioButton
+                        android:id="@+id/rb_attention"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_bg_rbtn_attention"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/mine_attention_btn"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+
+                    <RadioButton
+                        android:id="@+id/rb_popular"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/selector_bg_rbtn_attention"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/mine_hot_btn"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+
+                </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+                <include
+                    layout="@layout/layout_miniplay"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!--底部布局：播放器、作品列表-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/bg_works" />
+
+        </cn.bingoogolapple.refreshlayout.BGAStickyNavLayout>
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    <!--填充状态栏的view-->
+    <View
+        android:id="@+id/statusbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:alpha="0"
+        android:background="@color/mine_head_bac" />
+</RelativeLayout>

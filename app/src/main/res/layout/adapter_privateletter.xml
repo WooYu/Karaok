@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172px"
+    android:background="@color/white">
+
+
+    <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+        android:id="@+id/avatar"
+        android:layout_width="120px"
+        android:layout_height="90px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="26px"
+        android:layout_marginRight="26px"
+        app:shape_type="round" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/typesize_c"
+        tools:text="回忆" />
+
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="26px"
+        android:layout_toRightOf="@+id/avatar"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_d"
+        tools:text="没事" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="26px"
+        android:layout_marginTop="36px"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_e"
+        tools:text="昨天 09:24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="26px">
+
+        <include layout="@layout/layout_line_1dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

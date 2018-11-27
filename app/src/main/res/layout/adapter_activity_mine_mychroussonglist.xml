@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--歌手头像、昵称-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_d">
+
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/item_mine_mychrous_songpic"
+            android:layout_width="@dimen/mine_mychrous_item_pic_w_h"
+            android:layout_height="@dimen/mine_mychrous_item_pic_w_h"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/def_square_round"
+            app:layout_auto_baseheight="width"
+            app:mlborder_width="0dp"
+            app:radius="3dp"
+            app:shape_type="rectangle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gapsize_d"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_mine_mychrous_songname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_d"
+                tools:text="孤独终老" />
+
+            <TextView
+                android:id="@+id/chorus_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26px"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_e"
+                tools:text="合唱次数" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_mine_mychroussongs_canyu"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:background="@drawable/shape_editprofile_bg"
+            android:gravity="center"
+            android:text="@string/mine_mychroussongs_item_canyu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_d" />
+
+    </LinearLayout>
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#efedee" />
+</LinearLayout>

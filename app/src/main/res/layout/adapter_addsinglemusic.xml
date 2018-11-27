@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp">
+
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/mi_avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/def_square_large"
+            app:radius="5dp"
+            app:shape_type="rectangle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你知道我在等你"
+                android:textColor="#1e1e1e"
+                android:textSize="@dimen/typesize_d" />
+
+            <TextView
+                android:id="@+id/tv_listen_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@mipmap/album_listen"
+                android:drawablePadding="5dp"
+                android:text="100"
+                android:textColor="#8f8f8f"
+                android:textSize="@dimen/typesize_e" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/im_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/album_uncheck" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gainsboro" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/gapsize_h"></corners>
+    <stroke
+        android:width="@dimen/gapsize_h"
+        android:color="#999999"></stroke>
+    <solid android:color="#ffffff"></solid>
+    <padding
+        android:bottom="@dimen/gapsize_h"
+        android:left="@dimen/gapsize_h"
+        android:right="@dimen/gapsize_h"
+        android:top="@dimen/gapsize_h" />
+</shape>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_c">
+
+        <!--头像-->
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="top"
+            android:scaleType="fitXY"
+            android:src="@mipmap/def_avatar_round" />
+
+        <!--信息-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/gapsize_d"
+            android:layout_marginStart="@dimen/gapsize_d"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_c"
+                tools:text="唐效益" />
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/gapsize_d"
+                android:layout_toEndOf="@+id/nickname"
+                android:maxLines="1"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_c"
+                tools:text="送花给了:有点甜" />
+
+            <TextView
+                android:id="@+id/flowernum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nickname"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="@dimen/gapsize_f"
+                android:drawableStart="@mipmap/giftrank_flower"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_c"
+                tools:text="鲜花x1" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flowernum"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d"
+                tools:text="昨天15:45" />
+
+        </RelativeLayout>
+
+        <!--回复-->
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:drawablePadding="@dimen/gapsize_f"
+            android:drawableStart="@mipmap/message_reply"
+            android:text="@string/news_comment_reply"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/typesize_c" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/gapsize_d"
+        android:background="@color/gainsboro" />
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/gapsize_b"
+        android:paddingTop="@dimen/gapsize_b"
+        android:text="北海道"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/typesize_c" />
+
+    <include layout="@layout/layout_line_1dp" />
+</LinearLayout>

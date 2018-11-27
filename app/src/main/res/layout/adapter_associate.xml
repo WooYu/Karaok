@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/learnsing_search_item_size"
+    android:paddingEnd="@dimen/gapsize_d"
+    android:paddingStart="@dimen/gapsize_d">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="哈哈一笑倾城"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/typesize_d" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gainsboro" />
+
+</RelativeLayout>

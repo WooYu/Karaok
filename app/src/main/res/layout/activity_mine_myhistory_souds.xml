@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleGravity="center"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/mine_mychroussongs" />
+
+    <!--已点伴奏、练唱列表-->
+    <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+        android:id="@+id/rg_rich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_newjin"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/mine_myhistorysounds_ok"
+            android:textSize="@dimen/typesize_d" />
+
+        <RadioButton
+            android:id="@+id/rb_total"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:layout_weight="1"
+            android:text="@string/mine_myhistorysounds_learn"
+            android:textSize="@dimen/typesize_d" />
+    </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_rich"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

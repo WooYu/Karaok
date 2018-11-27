@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--歌手头像、昵称、时间-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/item_singer_avater"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/def_avatar_round" />
+
+        <TextView
+            android:id="@+id/item_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/item_singer_avater"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_d"
+            tools:text="孤独终老" />
+
+        <TextView
+            android:id="@+id/item_singer_addtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/text_medium"
+            android:textSize="@dimen/typesize_e"
+            tools:text="18:21" />
+
+    </RelativeLayout>
+
+    <!--发布的歌曲信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gapsize_d"
+        android:background="#f8f8f8"
+        android:orientation="horizontal">
+        <!--专辑图片-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_songs_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/def_square_large" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:button="@mipmap/music_pause" />
+
+        </RelativeLayout>
+
+        <!--歌曲名称、收听数量、评论-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <!--歌曲名称-->
+            <TextView
+                android:id="@+id/item_song_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/typesize_c"
+                tools:text="后会无期" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <!--收听数量-->
+                <TextView
+                    android:id="@+id/item_song_listen_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="2评论" />
+
+                <!--评论-->
+                <TextView
+                    android:id="@+id/item_song_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gapsize_d"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="22收听" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#e9eaec"/>
+</LinearLayout>

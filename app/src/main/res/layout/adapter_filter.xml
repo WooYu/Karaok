@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_root"
+    android:layout_width="74dp"
+    android:layout_height="74dp"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="1dip"
+    android:orientation="vertical">
+
+    <!--效果图片-->
+    <ImageView
+        android:id="@+id/iv_effect"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/def_square_large" />
+
+    <!--选中红色边框-->
+    <View
+        android:id="@+id/coverlayout_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/shape_mvpreview_selectborder"
+        android:visibility="gone" />
+
+    <!--效果说明-->
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/mvpreview_filter1"
+        android:textColor="@color/white"
+        android:textSize="10.0sp" />
+</FrameLayout>

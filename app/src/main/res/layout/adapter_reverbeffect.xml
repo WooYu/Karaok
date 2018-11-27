@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--混响名字和图片-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toannounce_reverb_height">
+
+        <ImageView
+            android:id="@+id/iv_reverb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/tobeanno_reverb_ktv" />
+
+        <!--混响效果-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom|end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_reverbname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/gapsize_d"
+                android:text="@string/tobeanno_inflexion_croaking"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_c" />
+
+            <View
+                android:layout_width="@dimen/toannounce_reverb_linewidth"
+                android:layout_height="@dimen/gapsize_h"
+                android:background="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--描述说明-->
+    <TextView
+        android:id="@+id/tv_reverbdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/toannounce_reverb_margin"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/typesize_d" />
+</LinearLayout>

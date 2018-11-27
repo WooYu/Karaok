@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleGravity="center"
+        app:titleLeftImg="@mipmap/arrow_left" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="613px"
+        android:background="@color/gray">
+
+        <RelativeLayout
+            android:id="@+id/rl_left"
+            android:layout_width="404px"
+            android:layout_height="404px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18px">
+
+            <ImageView
+                android:id="@+id/im_imagview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="64px"
+                android:layout_alignParentBottom="true"
+                android:background="#70000000"
+                android:gravity="center"
+                android:text="更换"
+                android:textColor="@color/white"
+                android:textSize="33px" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_marginBottom="24px"
+        android:layout_marginRight="24px"
+        android:layout_marginTop="24px"
+        android:layout_toRightOf="@+id/rl_left">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50px">
+
+            <EditText
+                android:id="@+id/edt_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:layout_marginTop="26px"
+                android:hint="我发布了一张新专辑，大家快来听听吧~我发布了一张新专辑，大家快来听听吧~我发布了一张新专辑，大家快来听听吧~我发布了一张新专辑，大家快来听听吧~我发布了一张新专辑，大家快来听听吧~我发布了一张新专辑，大家快来听听吧~我发布了一张新专辑，大家快来听听吧~"
+                android:maxLength="140"
+                android:textColor="#999999"
+                android:textSize="38px" />
+        </ScrollView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/pression"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_detail_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="4/140"
+            android:textColor="#cfcfcf"
+            android:textSize="31px" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e4e4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="#f6f6f6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e4e4" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="194px">
+
+        <ImageView
+            android:id="@+id/im_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="24px"
+            android:src="@mipmap/recording_publish_upload" />
+
+        <TextView
+            android:id="@+id/tv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24px"
+            android:layout_toRightOf="@+id/im_left"
+            android:text="私密上传"
+            android:textColor="@color/text_dark"
+            android:textSize="43px" />
+
+        <TextView
+            android:layout_width="540px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_top"
+            android:layout_marginTop="20px"
+            android:layout_toRightOf="@+id/im_left"
+            android:text="仅自己可见，可分享到QQ、微信、微博让好友欣赏"
+            android:textColor="#999999"
+            android:textSize="33px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:src="@mipmap/refusemsg" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e4e4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="#f6f6f6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e4e4" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px">
+
+        <ImageView
+            android:id="@+id/m_im_panzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="30px"
+            android:src="@mipmap/recording_publish_panzi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/m_im_panzi"
+            android:text="加入专辑"
+            android:textColor="@color/text_dark"
+            android:textSize="43px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="26px"
+            android:src="@mipmap/album_right_arrow" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e5e4e4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26px"
+            android:layout_marginTop="35px"
+            android:text="同步到"
+            android:textColor="#999999"
+            android:textSize="35px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="35px"
+            android:src="@mipmap/recording_weibo" />
+    </LinearLayout>
+
+
+</LinearLayout>

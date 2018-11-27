@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--私信、最近听众、收到礼物、系统消息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mine_head_bac"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <cn.bingoogolapple.badgeview.BGABadgeTextView
+            android:id="@+id/tv_audience"
+            style="@style/Msg_BGATextView"
+            android:background="@color/inform_bg_dark"
+            android:drawableTop="@mipmap/inform_audience"
+            android:text="@string/news_audience"
+            android:textSize="13sp"
+            app:badge_gravity="rightTop"
+            app:badge_padding="3dp" />
+
+        <cn.bingoogolapple.badgeview.BGABadgeTextView
+            android:id="@+id/tv_gift"
+            style="@style/Msg_BGATextView"
+            android:background="@color/inform_bg_light"
+            android:drawableTop="@mipmap/inform_gift"
+            android:text="@string/news_gift"
+            android:textSize="13sp"
+            app:badge_gravity="rightTop"
+            app:badge_padding="3dp" />
+
+        <cn.bingoogolapple.badgeview.BGABadgeTextView
+            android:id="@+id/tv_sysmsg"
+            style="@style/Msg_BGATextView"
+            android:background="@color/inform_bg_dark"
+            android:drawableTop="@mipmap/inform_sysmsg"
+            android:text="@string/news_sysmsg"
+            android:textSize="13sp"
+            app:badge_gravity="rightTop"
+            app:badge_padding="3dp" />
+    </LinearLayout>
+
+    <!--评论-->
+    <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+        android:id="@+id/autorg_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gapsize_g"
+        android:orientation="horizontal">
+
+        <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+            android:id="@+id/rb_concern"
+            style="@style/RadioButton_Divide"
+            android:background="@drawable/selector_bg_message"
+            android:checked="true"
+            android:text="@string/news_comment_attention"
+            android:textColor="@drawable/selector_tvcolor_message" />
+
+        <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+            android:id="@+id/rb_indifferent"
+            style="@style/RadioButton_Divide"
+            android:layout_marginStart="@dimen/gapsize_g"
+            android:background="@drawable/selector_bg_message"
+            android:text="@string/news_comment_disconcern"
+            android:textColor="@drawable/selector_tvcolor_message" />
+
+    </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+</LinearLayout>

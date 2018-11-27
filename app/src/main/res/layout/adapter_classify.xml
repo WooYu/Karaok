@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_indexes"
+        android:layout_width="fill_parent"
+        android:layout_height="27dp"
+        android:background="@color/cc_list_title_bk"
+        android:drawableStart="@mipmap/item_original"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp"
+        tools:text="A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gapsize_f"
+        android:paddingEnd="@dimen/gapsize_d"
+        android:paddingStart="@dimen/gapsize_d"
+        android:paddingTop="@dimen/gapsize_f">
+
+        <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/def_square_round"
+            app:mlborder_width="0dp"
+            app:radius="2dp"
+            app:shape_type="rectangle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/gapsize_d"
+            android:layout_marginStart="@dimen/gapsize_d"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_workname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_c"
+                    tools:text="雨" />
+
+                <TextView
+                    android:id="@+id/tv_autor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gapsize_g"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="森高森高" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_worksize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapsize_f"
+                android:drawablePadding="@dimen/gapsize_g"
+                android:drawableStart="@mipmap/item_sing_global"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d"
+                tools:text="3.46M" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ksing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_bg_blue_roundedcorners"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="3dp"
+            android:text="@string/ksong"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+</LinearLayout>

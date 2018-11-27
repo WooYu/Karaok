@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:drawable="@drawashape_send_gift_bg_bac" android:state_pressed="true"></item>-->
+    <item android:drawable="@mipmap/music_pause" android:state_checked="false"></item>
+    <!--<item android:drawable="@mipmine_music_item_playplay" android:state_focused="true"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_bac" android:state_checked="true"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_bac" android:state_selected="true"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_bac" android:state_active="true"></item>-->
+    <item android:drawable="@mipmap/music_play" android:state_checked="true"></item>
+    <!--<item android:drawable="@mipmap/mine_music_item_stop" android:state_focused="true"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_normalrmal" android:state_checked="false"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_normalrmal" android:state_selected="false"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_normalrmal" android:state_selected="false"></item>-->
+    <!--<item android:drawable="@drawashape_send_gift_bg_normalrmal"></item>-->
+    <!--<item android:drawable="@mipmine_music_item_playplay" android:state_selected="false"></item>-->
+</selector>

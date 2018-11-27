@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E1E1E"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapsize_d"
+            android:text="@string/ksong_switchmode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <include layout="@layout/layout_singingmode" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_colose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#363636"
+            android:gravity="center"
+            android:padding="@dimen/gapsize_d"
+            android:text="@string/dialog_close"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+    </LinearLayout>
+
+</LinearLayout>

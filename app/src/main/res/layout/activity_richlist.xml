@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_learnsing"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/find_richlist" />
+
+    <!--财富榜-->
+    <include layout="@layout/layout_head_richrank" />
+
+    <!--新晋榜、日榜、总榜-->
+    <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+        android:id="@+id/rg_rich"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_newjin"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:checked="true"
+            android:text="@string/find_rich_newjinbang" />
+
+        <RadioButton
+            android:id="@+id/rb_everyday"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:text="@string/find_rich_daylist" />
+
+        <RadioButton
+            android:id="@+id/rb_total"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:text="@string/find_rich_totallist" />
+    </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+    <!--分割线-->
+    <include layout="@layout/layout_line_1dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_rich"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleRightImg="@mipmap/search_icon" />
+
+    <!--已点伴奏、练唱列表-->
+    <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+        android:id="@+id/autoRg_ever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/gapsize_d">
+
+        <RadioButton
+            android:id="@+id/rb_accompany"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:checked="true"
+            android:text="@string/ever_accompaniment" />
+
+        <RadioButton
+            android:id="@+id/rb_practic"
+            style="@style/RadioButton_FixedSize.BlueWihteUnderline"
+            android:text="@string/ever_practicing" />
+    </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <!--列表-->
+    <FrameLayout
+        android:id="@+id/fl_ever"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

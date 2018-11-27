@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_medium">
+
+
+    <!--立即体验-->
+    <Button
+        android:id="@+id/btn_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/gapsize_a"
+        android:text="@string/enter_welcome"
+        android:textColor="@color/black"
+        android:textSize="@dimen/typesize_e" />
+
+</RelativeLayout>

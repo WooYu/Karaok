@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_scoreresult_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--上-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="14"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_scoreresult_up" />
+
+        <!--中-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_scoreresult_mid" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--左上-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_scoreresult_down_left1" />
+
+                <!--左下-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_scoreresult_down_left2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--右上-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_scoreresult_down_right1" />
+
+                <!--右下-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_scoreresult_down_right2" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_scoreresults" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--上-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="14"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.clicktech.snsktv.widget.scoreresult.TextView_Synthetical
+                android:id="@+id/tv_synthetical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_synthetical"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.clicktech.snsktv.widget.scoreresult.TextView_Scores
+                android:id="@+id/tv_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progress_red"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/layer_progress_score_red" />
+
+            <ProgressBar
+                android:id="@+id/progress_blue"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/layer_progress_score_blue" />
+
+            <TextView
+                android:id="@+id/tv_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                tools:text="@string/format_nationaverage" />
+
+            <com.clicktech.snsktv.widget.scoreresult.RadarChart
+                android:id="@+id/radarchart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!--中-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <com.clicktech.snsktv.widget.scoreresult.TextView_Border
+                android:id="@+id/tv_tone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:text="@string/score_tone"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:borderColor="#00A2E8"
+                app:borderWidth="2dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tone"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:id="@+id/tv_accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score_accuracy"
+                    android:textColor="#fff33a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_accuracy_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/tv_accuracy"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_accuracy_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_accuracy_value"
+                    android:layout_toEndOf="@id/tv_accuracy_value"
+                    android:text="%"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"
+                    android:textStyle="bold" />
+
+                <com.clicktech.snsktv.widget.scoreresult.ScoreView_Pitch
+                    android:id="@+id/scoreview_pitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/tv_accuracy"
+                    android:layout_marginStart="1dp"
+                    android:layout_toEndOf="@id/tv_accuracy_unit" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--左上-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.clicktech.snsktv.widget.scoreresult.TextView_Border
+                        android:id="@+id/tv_rhythm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/score_rhythm"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:borderColor="#00A2E8"
+                        app:borderWidth="2dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_rhythm"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp">
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/score_rhythm_right"
+                            android:textColor="#fff33a"
+                            android:textSize="13sp" />
+
+                        <com.clicktech.snsktv.widget.scoreresult.ScoreView_Rhythm
+                            android:id="@+id/scoreview_rhythm"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="@string/score_rhythm_left"
+                            android:textColor="#fff33a"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!--左下-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.clicktech.snsktv.widget.scoreresult.TextView_Border
+                        android:id="@+id/tv_stability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/score_stability"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:borderColor="#00A2E8"
+                        app:borderWidth="2dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_stability"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/score_stability_left"
+                            android:textColor="#fff33a"
+                            android:textSize="13sp" />
+
+                        <com.clicktech.snsktv.widget.scoreresult.ScoreView_Stability
+                            android:id="@+id/scoreview_stability"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="@string/score_stability_right"
+                            android:textColor="#fff33a"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!--右上-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="3">
+
+                    <com.clicktech.snsktv.widget.scoreresult.TextView_Border
+                        android:id="@+id/tv_longsound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/score_longsound"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:borderColor="#00A2E8"
+                        app:borderWidth="2dp" />
+
+                    <RatingBar
+                        android:id="@+id/rbar_longsound"
+                        style="@style/RatingBar_Score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_longsound"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:stepSize="0.1" />
+                </RelativeLayout>
+
+                <!--右下-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4">
+
+                    <com.clicktech.snsktv.widget.scoreresult.TextView_Border
+                        android:id="@+id/tv_trill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/score_trill"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:borderColor="#00A2E8"
+                        app:borderWidth="2dp" />
+
+                    <RatingBar
+                        android:id="@+id/rbar_trill"
+                        style="@style/RatingBar_Score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_trill"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:stepSize="0.1" />
+
+                    <TextView
+                        android:id="@+id/tv_trill_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rbar_trill"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#fff33a"
+                        android:textSize="13sp"
+                        tools:text="@string/format_trillsound" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="20dp"
+        android:src="@mipmap/scoreresult_close" />
+</RelativeLayout>

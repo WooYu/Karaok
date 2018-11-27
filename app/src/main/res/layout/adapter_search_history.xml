@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="46px"
+        android:layout_marginTop="28px"
+        android:text="热情的沙漠"
+        android:textColor="#434343"
+        android:textSize="42px" />
+
+    <TextView
+        android:id="@+id/m_singer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginBottom="32px"
+        android:layout_marginLeft="46px"
+        android:text="张学友"
+        android:textColor="#373637"
+        android:textSize="30px"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="38px"
+        android:src="@mipmap/search_del" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gapsize_h"
+        android:layout_alignParentBottom="true"
+        android:background="#efedee" />
+</RelativeLayout>

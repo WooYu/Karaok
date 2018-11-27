@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#515151"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_tone_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/gapsize_f"
+        android:src="@mipmap/ksong_tone_add" />
+
+    <TextView
+        android:id="@+id/tv_tone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2c2c2c"
+        android:gravity="center"
+        android:padding="@dimen/gapsize_f"
+        android:text="0"
+        android:textColor="#8a8a8a" />
+
+    <ImageView
+        android:id="@+id/iv_tone_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/gapsize_f"
+        android:src="@mipmap/ksong_tone_del" />
+</LinearLayout>

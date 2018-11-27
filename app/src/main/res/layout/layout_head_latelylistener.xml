@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/gapsize_c"
+    android:paddingEnd="@dimen/gapsize_d"
+    android:paddingStart="@dimen/gapsize_d"
+    android:paddingTop="@dimen/gapsize_c">
+
+    <TextView
+        android:id="@+id/today_listen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="26px"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_e"
+        tools:text="@string/format_listeningtimesoftoday" />
+
+    <TextView
+        android:id="@+id/sum_listen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gapsize_d"
+        android:layout_weight="1"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/typesize_e"
+        tools:text="@string/format_listeningtimesoftotal" />
+
+</LinearLayout>

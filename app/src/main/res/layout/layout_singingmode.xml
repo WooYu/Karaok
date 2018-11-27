@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_learnsing">
+
+    <!--练唱-->
+    <LinearLayout
+        android:id="@+id/ll_practice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/gapsize_f">
+
+        <ImageView
+            android:layout_width="@dimen/learnsing_practic_img_w_h"
+            android:layout_height="@dimen/learnsing_practic_img_w_h"
+            android:src="@mipmap/img_act_learnsing_bts_practicbt_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/learnsing_practic"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e" />
+    </LinearLayout>
+
+    <!--MV-->
+    <LinearLayout
+        android:id="@+id/ll_mv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/gapsize_f">
+
+        <ImageView
+            android:layout_width="@dimen/learnsing_practic_img_w_h"
+            android:layout_height="@dimen/learnsing_practic_img_w_h"
+            android:src="@mipmap/img_act_learnsing_bts_mvbt_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/learnsing_mv"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e" />
+    </LinearLayout>
+
+    <!--歌唱-->
+    <LinearLayout
+        android:id="@+id/ll_ksong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/gapsize_f">
+
+        <ImageView
+            android:id="@+id/iv_ksong"
+            android:layout_width="@dimen/learnsing_practic_song_img_width"
+            android:layout_height="@dimen/learnsing_practic_song_img_width"
+            android:src="@mipmap/img_act_learnsing_bts_singbt_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/learnsing_sing"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e" />
+    </LinearLayout>
+
+    <!--合唱-->
+    <LinearLayout
+        android:id="@+id/ll_chorus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/gapsize_f">
+
+        <ImageView
+            android:layout_width="@dimen/learnsing_practic_img_w_h"
+            android:layout_height="@dimen/learnsing_practic_img_w_h"
+            android:src="@mipmap/img_act_learnsing_bts_chrousbt_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/learnsing_chorus"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e" />
+
+    </LinearLayout>
+
+    <!--视频合唱-->
+    <LinearLayout
+        android:id="@+id/ll_videochorus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/gapsize_f">
+
+        <ImageView
+            android:layout_width="@dimen/learnsing_practic_img_w_h"
+            android:layout_height="@dimen/learnsing_practic_img_w_h"
+            android:src="@mipmap/img_act_learnsing_bts_mvchrousbt_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/learnsing_video_chorus"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_e" />
+
+    </LinearLayout>
+</merge>

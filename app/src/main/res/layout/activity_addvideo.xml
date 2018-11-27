@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mv_bg"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true">
+
+    <!--mv预览-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.wysaid.view.CameraRecordGLSurfaceView
+            android:id="@+id/glsurfaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_medium"
+        app:titleAlpha="0"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/tobeanno_addavideo"
+        app:titleRightImg="@mipmap/mv_camera" />
+
+    <!--已录制时长、歌曲时长-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleview"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gapsize_f"
+        android:paddingLeft="@dimen/gapsize_d"
+        android:paddingRight="@dimen/gapsize_d"
+        android:paddingTop="@dimen/gapsize_d">
+        <!--已录制时长-->
+        <TextView
+            android:id="@+id/tv_curtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ksong_time_initial"
+            android:textColor="@color/gainsboro"
+            android:textSize="@dimen/typesize_d" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="27px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/gapsize_f"
+            android:layout_marginRight="@dimen/gapsize_f"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/layer_progress_red" />
+
+        <TextView
+            android:id="@+id/tv_totaltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ksong_time_initial"
+            android:textColor="@color/gainsboro"
+            android:textSize="@dimen/typesize_d" />
+    </LinearLayout>
+
+    <!--开始/暂停-->
+    <CheckBox
+        android:id="@+id/cb_playpause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_reset"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/selector_addvideo_startpause_bg"
+        android:button="@null" />
+
+    <!--重置-->
+    <ImageView
+        android:id="@+id/iv_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/gapsize_b"
+        android:src="@mipmap/addvideo_reset" />
+
+    <!--倒计时-->
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/cantata_countdown"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold" />
+</RelativeLayout>

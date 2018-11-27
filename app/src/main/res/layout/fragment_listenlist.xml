@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!--好友排行-->
+            <LinearLayout
+                android:id="@+id/ll_friendrank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!--好友排行-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/gapsize_d"
+                    android:text="@string/learnsing_friendrank"
+                    android:textColor="@color/text_medium"
+                    android:textSize="@dimen/typesize_d"
+                    android:visibility="gone" />
+
+                <!--分割线-->
+                <include layout="@layout/layout_line_1dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_friendrank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <!--全国排行-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/gapsize_d"
+                android:text="@string/learnsing_nationrank"
+                android:textColor="@color/text_medium"
+                android:textSize="@dimen/typesize_d"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/layout_line_1dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/rv_nationrank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--没有数据时的布局-->
+        <include
+            layout="@layout/layout_empty_learnsing"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</com.clicktech.snsktv.arms.widget.scrollview.NestedScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/setting_ohter_about" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="30px"
+        android:src="@mipmap/login_logo" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40px"
+        android:textColor="@color/text_light"
+        android:textSize="40px"
+        tools:text="Karaok!1.0.0" />
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <RelativeLayout
+        android:id="@+id/common"
+        android:layout_width="match_parent"
+        android:layout_height="120px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42px"
+            android:text="@string/setting_about_grade"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="26px"
+            android:src="@mipmap/arrow_right" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <RelativeLayout
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="120px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42px"
+            android:text="@string/setting_about_function"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/typesize_c" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="26px"
+            android:src="@mipmap/arrow_right" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+</LinearLayout>

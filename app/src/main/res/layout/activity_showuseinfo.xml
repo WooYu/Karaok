@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <!--标题：编辑资料-->
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/setting_datum_edit" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--头像、更换头像-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="440px"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="180px"
+                    android:layout_height="180px"
+                    android:layout_marginTop="64px"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/def_avatar_round"
+                    app:layout_auto_basewidth="height"
+                    app:mlborder_width="0dp"
+                    app:shape_type="round" />
+
+                <TextView
+                    android:id="@+id/regist_tv_avater"
+                    android:layout_width="246px"
+                    android:layout_height="67px"
+                    android:layout_marginTop="32px"
+                    android:background="@drawable/shape_bg_changeavatar_lightgray"
+                    android:gravity="center"
+                    android:text="@string/enter_regist_info_upavater"
+                    android:textColor="#030303"
+                    android:textSize="38px"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <!--<include layout="@layout/layout_line_1dp" />-->
+
+            <!--相册-->
+            <RelativeLayout
+                android:id="@+id/album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/gapsize_b"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_datum_album"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/arrow_right_small" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_1dp" />
+
+            <!--昵称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/gapsize_b"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_datum_nick"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="猕猴桃"
+                    android:textColor="@color/text_medium"
+                    android:textSize="@dimen/typesize_d" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/nickname_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/enter_regist_info_unick"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="60px"
+                    android:background="@null"
+                    android:maxLength="15"
+                    android:textColor="@color/text_light"
+                    android:textSize="43px" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/sex_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_sex"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/m_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="60px"
+                    android:text=" "
+                    android:textColor="@color/text_light"
+                    android:textSize="43px" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <!--生日-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/birthday_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="生日"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="60px"
+                    android:textColor="@color/text_light"
+                    android:textSize="43px" />
+
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/layout_line_1dp" />
+
+
+            <!--地区-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+                    android:id="@+id/address_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="地区"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="60px"
+                    android:text="       "
+                    android:textColor="@color/text_light"
+                    android:textSize="43px" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+            <!--登录方式-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_sns"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="60px"
+                    android:text="      "
+                    android:textColor="@color/text_light"
+                    android:textSize="43px" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <include layout="@layout/layout_line_1dp" />
+
+            <!--ID-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="ID"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/tv_accountnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginRight="60px"
+                    android:text="      "
+                    android:textColor="@color/text_light"
+                    android:textSize="43px" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <!--语言-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_language"
+                    android:textColor="@color/text_dark"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/tv_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/m_address_enter"
+                    android:text="      "
+                    android:textColor="@color/text_dark"
+                    android:textSize="43px" />
+
+                <ImageView
+                    android:id="@+id/m_address_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="26px"
+                    android:src="@mipmap/album_right_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#efedee" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="242px"
+                    android:background="@drawable/shape_editprofile_bg"
+                    android:gravity="center"
+                    android:text="@string/enter_regist_info_submit"
+                    android:textColor="@color/white"
+                    android:textSize="35px" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

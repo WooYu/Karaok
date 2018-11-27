@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--登录状态-->
+    <string name="userid_notlogin">0</string>
+    <!--语言:系统获取到的语言类型和需要传给后台的code参数-->
+    <string name="language_china">zh</string>
+    <string name="language_english">en</string>
+    <string name="language_japan">ja</string>
+    <string name="language_code_china">zh_CN</string>
+    <string name="language_code_english">en_US</string>
+    <string name="language_code_japan">ja_JP</string>
+    <!--第三方登录类型：传给后台	qq,wx,wb,fb,tw,ln,yh-->
+    <string name="thirdtype_qq">qq</string>
+    <string name="thirdtype_wx">wx</string>
+    <string name="thirdtype_wb">wb</string>
+    <string name="thirdtype_fb">fb</string>
+    <string name="thirdtype_tw">tw</string>
+    <string name="thirdtype_ln">ln</string>
+    <string name="thirdtype_yh">yh</string>
+    <!--登录模式-->
+    <string name="loginmode_qq">QQ</string>
+    <string name="loginmode_wx">WeChat</string>
+    <string name="loginmode_wb">Sina</string>
+    <string name="loginmode_fb">FaceBook</string>
+    <string name="loginmode_tw">Twitter</string>
+    <string name="loginmode_ln">Line</string>
+    <string name="loginmode_yh">YaHoo</string>
+    <!--分享支持类型-->
+    <string name="shares_supporttypes_facebook">Facebook</string>
+    <string name="shares_supporttypes_twitter">Twitter</string>
+    <string name="shares_supporttypes_line">Line</string>
+    <string name="shares_supporttypes_yahoo">Yahoo!</string>
+    <string name="shares_supporttypes_wechat">微信</string>
+    <string name="shares_supporttypes_friend">朋友圈</string>
+    <string name="shares_supporttypes_qq">QQ</string>
+    <string name="shares_supporttypes_sina">新浪</string>
+
+</resources>

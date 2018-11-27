@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/gapsize_f"
+    android:layout_marginEnd="@dimen/gapsize_f"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--头像-->
+    <ImageView
+        android:id="@+id/iv_mine_album_pic"
+        android:layout_width="314px"
+        android:layout_height="314px"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/gapsize_f"
+        android:scaleType="fitXY"
+        android:src="@mipmap/def_square_large"
+        app:layout_auto_baseheight="width" />
+
+    <!--单曲名称-->
+
+    <TextView
+        android:id="@+id/tv_music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7px"
+        android:layout_marginLeft="14px"
+        android:layout_marginTop="7px"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="单曲名称"
+        android:textColor="#000000"
+        android:textSize="@dimen/typesize_c" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E5E5E5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_listen_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7px"
+                android:layout_marginLeft="12px"
+                android:layout_marginTop="7px"
+                android:drawableLeft="@mipmap/headset_singer_music"
+                android:text="2578"
+                android:textColor="#555555"
+                android:textSize="31px" />
+
+            <TextView
+                android:id="@+id/tv_gift_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7px"
+                android:layout_marginLeft="12px"
+                android:layout_marginTop="7px"
+                android:drawableLeft="@mipmap/trophy_singer_music"
+                android:text="3987"
+                android:textColor="#555555"
+                android:textSize="31px" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

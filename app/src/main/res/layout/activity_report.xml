@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/inform_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/gapsize_e"
+                android:paddingStart="@dimen/gapsize_c"
+                android:text="@string/inform_type"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d" />
+
+            <RelativeLayout
+                android:id="@+id/rl_0"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_harass"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_advert"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="#ededed" />
+
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_swindle"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_3"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_sexy"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <!--暴力去掉-->
+            <RelativeLayout
+                android:id="@+id/rl_4"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_violence"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_5"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_reaction"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_6"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_stolensong"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <!--传销去掉-->
+            <RelativeLayout
+                android:id="@+id/rl_7"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:text="@string/inform_pyramidsale"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_8"
+                android:layout_width="match_parent"
+                android:layout_height="140px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="42px"
+                    android:layout_marginStart="13dp"
+                    android:text="@string/inform_other"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <ImageView
+                    android:id="@+id/img_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/receive_msg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/gapsize_e"
+                android:paddingLeft="@dimen/gapsize_c"
+                android:text="@string/inform_screentshot"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d" />
+
+            <RelativeLayout
+                android:id="@+id/add_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/gapsize_d">
+
+                <TextView
+                    android:id="@+id/img_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/inform_caption"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_c" />
+
+                <ImageView
+                    android:id="@+id/update_img"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_1dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/gapsize_e"
+                android:paddingStart="@dimen/gapsize_c"
+                android:text="@string/inform_reportdesc"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/typesize_d" />
+
+            <EditText
+                android:id="@+id/report_detail"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/gapsize_e"
+                android:background="@drawable/shape_report_edit_bac"
+                android:gravity="top"
+                android:hint="@string/inform_reportdesc_hint"
+                android:maxLength="100"
+                android:padding="@dimen/gapsize_e"
+                android:textColor="#bbbbbb"
+                android:textColorHint="#bbbbbb"
+                android:textSize="@dimen/typesize_c" />
+
+
+            <TextView
+                android:id="@+id/upload"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/gapsize_b"
+                android:background="@drawable/shape_editprofile_bg"
+                android:gravity="center"
+                android:text="@string/inform_sure"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

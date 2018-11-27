@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <!--状态栏填充-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:background="@color/titlebar_bg" />
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleName="@string/main_discover" />
+
+    <include
+        layout="@layout/layout_miniplay"
+        android:visibility="gone" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!--轮播图-->
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/banner_discover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/learnsing_banner_size"
+                    app:canLoop="true" />
+
+                <!--人气歌手-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gapsize_h"
+                    android:background="@mipmap/bg_discover_hotsinger">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/find_hot_singer"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+
+                    <TextView
+                        android:id="@+id/tv_all_hotsinger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="@dimen/gapsize_d"
+                        android:paddingEnd="@dimen/gapsize_d"
+                        android:paddingStart="@dimen/gapsize_a"
+                        android:paddingTop="@dimen/gapsize_d"
+                        android:text="@string/find_all"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_hotsinger"
+                        android:layout_width="match_parent"
+                        android:layout_height="684px" />
+                </RelativeLayout>
+
+                <!--人气歌曲-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gapsize_h"
+                    android:background="@mipmap/bg_discover_hotsong">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/find_hot_songs"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+
+                    <TextView
+                        android:id="@+id/tv_all_hotsong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:paddingBottom="@dimen/gapsize_d"
+                        android:paddingEnd="@dimen/gapsize_d"
+                        android:paddingStart="@dimen/gapsize_a"
+                        android:paddingTop="@dimen/gapsize_d"
+                        android:text="@string/find_all"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_hotsong"
+                        android:layout_width="match_parent"
+                        android:layout_height="684px" />
+                </RelativeLayout>
+
+                <!--排行榜：试听、财富、全国、好友-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gapsize_h"
+                    android:background="@mipmap/bg_discover_rank"
+                    android:padding="@dimen/gapsize_d">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawableEnd="@mipmap/discover_crown"
+                        android:drawablePadding="@dimen/gapsize_d"
+                        android:drawableStart="@mipmap/discover_crown"
+                        android:text="@string/find_rank"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+
+                </RelativeLayout>
+
+                <!--试听排行-->
+                <RelativeLayout
+                    android:id="@+id/rl_audition"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/discover_bottom_rank_height">
+
+                    <ImageView
+                        android:id="@+id/iv_audition"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/bg_discover_audition" />
+
+                    <TextView
+                        android:id="@+id/tv_click_audition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/gapsize_d"
+                        android:text="@string/find_moreclick"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gapsize_h"
+                    android:orientation="horizontal">
+                    <!--财富排行榜-->
+                    <RelativeLayout
+                        android:id="@+id/rl_rich"
+                        android:layout_width="@dimen/discover_bottom_rank_width"
+                        android:layout_height="@dimen/discover_bottom_rank_height"
+                        android:layout_marginEnd="@dimen/gapsize_h"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_rich"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/def_rectangle_border_white" />
+
+                        <TextView
+                            android:id="@+id/tv_click_rich"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/gapsize_f"
+                            android:text="@string/find_moreclick"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_d" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="@dimen/gapsize_f"
+                            android:text="@string/find_richlis"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_c" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="90px"
+                            android:text="@string/find_rank"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_d" />
+                    </RelativeLayout>
+
+                    <!--全国排行榜-->
+                    <RelativeLayout
+                        android:id="@+id/rl_nationwide"
+                        android:layout_width="@dimen/discover_bottom_rank_width"
+                        android:layout_height="@dimen/discover_bottom_rank_height"
+                        android:layout_marginEnd="@dimen/gapsize_h"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_nationwide"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/def_rectangle_border_white" />
+
+                        <TextView
+                            android:id="@+id/tv_click_nationwide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/gapsize_f"
+                            android:text="@string/find_moreclick"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_d" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="@dimen/gapsize_f"
+                            android:text="@string/find_national_rank"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_c" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="90px"
+                            android:text="@string/find_rank"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_d" />
+
+                    </RelativeLayout>
+
+                    <!--好友排行榜-->
+                    <RelativeLayout
+                        android:id="@+id/rl_friend"
+                        android:layout_width="@dimen/discover_bottom_rank_width"
+                        android:layout_height="@dimen/discover_bottom_rank_height"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_friend"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/def_rectangle_border_white" />
+
+                        <TextView
+                            android:id="@+id/tv_click_friend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/gapsize_f"
+                            android:text="@string/find_moreclick"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_d" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="@dimen/gapsize_f"
+                            android:text="@string/find_friend"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_c" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="90px"
+                            android:text="@string/find_rank"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/typesize_d" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+</LinearLayout>

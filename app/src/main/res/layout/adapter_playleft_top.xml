@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/gapsize_e"
+    android:paddingRight="@dimen/gapsize_e"
+    android:paddingTop="@dimen/gapsize_f">
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="87px"
+        android:layout_height="87px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/songdetail_toprank1" />
+
+    <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="114px"
+        android:layout_height="114px"
+        android:layout_marginLeft="@dimen/gapsize_b"
+        android:scaleType="fitXY"
+        android:src="@mipmap/def_avatar_round"
+        app:layout_auto_basewidth="height"
+        app:mlborder_color="@color/white"
+        app:mlborder_width="0dp"
+        app:shape_type="round" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gapsize_b"
+        android:text="歌曲昵称"
+        android:textColor="@color/white"
+        android:textSize="@dimen/typesize_c" />
+</LinearLayout>

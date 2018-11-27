@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/im_singer_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/def_avatar_round" />
+
+    <TextView
+        android:id="@+id/item_tv_singer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/im_singer_avatar"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp"
+        tools:text="王心灵" />
+
+</RelativeLayout>

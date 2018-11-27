@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <!--标题：编辑资料-->
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/setting_datum_edit" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--头像、更换头像-->
+            <LinearLayout
+                android:id="@+id/ll_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/gapsize_a"
+                android:layout_marginTop="@dimen/gapsize_a"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.clicktech.snsktv.widget.filetcircleimageview.MLImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="180px"
+                    android:layout_height="180px"
+                    android:src="@mipmap/def_avatar_round"
+                    app:layout_auto_basewidth="height"
+                    app:mlborder_color="@color/white"
+                    app:mlborder_width="2dp"
+                    app:shape_type="round" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gapsize_d"
+                    android:background="@drawable/shape_bg_changeavatar"
+                    android:gravity="center"
+                    android:text="@string/enter_regist_info_upavater"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/typesize_d" />
+            </LinearLayout>
+
+            <!--昵称-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/enter_regist_info_unick"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <EditText
+                    android:id="@+id/et_nickname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/album_right_arrow"
+                    android:gravity="right"
+                    android:hint="@string/enter_regist_info_unick_hint"
+                    android:maxLength="15"
+                    android:paddingEnd="@dimen/gapsize_d"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--性别-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_sex"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/album_right_arrow"
+                    android:gravity="right"
+                    android:paddingEnd="@dimen/gapsize_d"
+                    android:text="@string/setting_datum_sex_female"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--生日-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_birthday"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/album_right_arrow"
+                    android:gravity="right"
+                    android:paddingEnd="@dimen/gapsize_d"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="2017-05-15" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--地区-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_area"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/album_right_arrow"
+                    android:gravity="right"
+                    android:paddingEnd="@dimen/gapsize_d"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="中国-北京" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--登录方式-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:text="@string/setting_datum_sns"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:id="@+id/tv_loginmethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/gapsize_b"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="faceboook" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--ID-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_id"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:id="@+id/tv_accountnumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/gapsize_b"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="20154646" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--语言-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="74px"
+                    android:text="@string/setting_datum_language"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d" />
+
+                <TextView
+                    android:id="@+id/tv_language"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/album_right_arrow"
+                    android:gravity="right"
+                    android:paddingEnd="@dimen/gapsize_d"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/typesize_d"
+                    tools:text="中国-北京" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="26px"
+                android:background="@color/cp_gray_deep" />
+
+            <!--输入确认-->
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/gapsize_a"
+                android:layout_marginTop="105px"
+                android:background="@drawable/shape_editprofile_bg"
+                android:gravity="center"
+                android:text="@string/setting_datum_finish"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_c" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

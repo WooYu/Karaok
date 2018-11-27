@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/setting_network_tip" />
+
+    <include layout="@layout/layout_line_1dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/all"
+        android:layout_width="match_parent"
+        android:layout_height="144px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42px"
+            android:text="@string/setting_network_every"
+            android:textColor="@color/text_dark"
+            android:textSize="49px" />
+
+        <ImageView
+            android:id="@+id/im_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:src="@mipmap/receive_msg" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <RelativeLayout
+        android:id="@+id/only_frends"
+        android:layout_width="match_parent"
+        android:layout_height="144px">
+
+        <ImageView
+            android:id="@+id/im_frends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:src="@mipmap/receive_msg" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/setting_network_switching"
+            android:textColor="@color/text_dark"
+            android:textSize="49px" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+    <RelativeLayout
+        android:id="@+id/none"
+        android:layout_width="match_parent"
+        android:layout_height="144px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42px"
+            android:text="@string/setting_network_noprompt"
+            android:textColor="@color/text_dark"
+            android:textSize="49px" />
+
+        <ImageView
+            android:id="@+id/im_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26px"
+            android:src="@mipmap/receive_msg" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1dp" />
+
+
+</LinearLayout>

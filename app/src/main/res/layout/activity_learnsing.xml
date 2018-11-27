@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_learnsing"
+    android:orientation="vertical">
+
+    <!--内容-->
+    <com.clicktech.snsktv.arms.widget.headerviewpager.HeaderViewPager
+        android:id="@+id/fixedNaviLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:hvp_topOffset="@dimen/titlebar_size">
+        <!--头部-->
+        <LinearLayout
+            android:id="@+id/ll_learnsing_topbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/gapsize_b"
+                android:paddingRight="@dimen/gapsize_b"
+                android:paddingTop="@dimen/statusbar_view_height">
+
+                <!--图片-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gapsize_a"
+                    android:layout_marginRight="@dimen/gapsize_a"
+                    android:layout_marginTop="150px"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/image_song_album"
+                        android:layout_width="@dimen/learnsing_album_size"
+                        android:layout_height="@dimen/learnsing_album_size"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/def_square_large" />
+
+                    <ImageView
+                        android:id="@+id/iv_externallink"
+                        android:layout_width="@dimen/learnsing_album2_size_w"
+                        android:layout_height="@dimen/learnsing_album2_size_h"
+                        android:layout_below="@+id/image_song_album"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/gapsize_f"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ksong_googlelink_white" />
+                </RelativeLayout>
+
+                <!--歌曲介绍：歌曲名、歌手名、第一句歌词-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="150px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_song_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_c" />
+
+                    <TextView
+                        android:id="@+id/tv_song_singername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/learnsing_top_singername_height"
+                        android:layout_marginTop="@dimen/gapsize_f"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+
+                    <TextView
+                        android:layout_width="174px"
+                        android:layout_height="60px"
+                        android:background="@mipmap/img_act_learnsing_top_songwordbt_bg"
+                        android:gravity="center"
+                        android:text="@string/learnsing_songword"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_e" />
+
+                    <TextView
+                        android:id="@+id/tv_song_songfirstlrc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gapsize_f"
+                        android:ellipsize="end"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/typesize_d" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--练唱、MV、合唱、视频合唱-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/img_activity_learnsing_top_bts_bg"
+                android:gravity="bottom|center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/gapsize_f"
+                android:paddingTop="@dimen/gapsize_c">
+
+                <include layout="@layout/layout_singingmode" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--导航栏-->
+        <com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup
+            android:id="@+id/autorg_learnsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--收听榜-->
+            <RadioButton
+                android:id="@+id/rb_listen"
+                style="@style/RadioButton_FixedSize.LearnSing"
+                android:background="@drawable/selector_learnsing_rgbt_listentop_bt_bg"
+                android:checked="true" />
+            <!--人气榜-->
+            <RadioButton
+                android:id="@+id/rb_popular"
+                style="@style/RadioButton_FixedSize.LearnSing"
+                android:background="@drawable/selector_learnsing_rgbt_populartop_bt_bg" />
+            <!--合唱推荐-->
+            <RadioButton
+                android:id="@+id/rb_chorus"
+                style="@style/RadioButton_FixedSize.LearnSing"
+                android:background="@drawable/selector_learnsing_rgbt_chourstop_bt_bg" />
+        </com.clicktech.snsktv.arms.widget.autolayout.AutoRadioGroup>
+
+        <!--列表展示-->
+        <FrameLayout
+            android:id="@+id/fl_learnsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="6px"
+            android:layout_marginStart="6px" />
+
+    </com.clicktech.snsktv.arms.widget.headerviewpager.HeaderViewPager>
+
+    <!--标题-->
+
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/statusbar_view_height"
+        app:titleAlpha="0"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleRightImg="@mipmap/songdetail_menu" />
+
+</RelativeLayout>

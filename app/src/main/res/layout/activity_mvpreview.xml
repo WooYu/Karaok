@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mv_bg"
+    android:baselineAligned="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.clicktech.snsktv.widget.titlebar.HeaderView
+        android:id="@+id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_medium"
+        app:titleAlpha="0"
+        app:titleLeftImg="@mipmap/arrow_left"
+        app:titleName="@string/mvpreview"
+        app:titleRightImg="@mipmap/mv_camera" />
+
+    <!--mv预览-->
+    <RelativeLayout
+        android:id="@+id/mvpreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <org.wysaid.view.CameraRecordGLSurfaceView
+            android:id="@+id/sufaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.clicktech.snsktv.widget.videoplayer.MVPreviewPlayer
+            android:id="@+id/playerSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--效果说明-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_mveffect_describe"
+        android:orientation="vertical"
+        android:padding="@dimen/gapsize_d">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/mvpreview_filter_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c" />
+
+        <TextView
+            android:id="@+id/tv_eeffect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mvpreview_filter_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_d" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--开始录制-->
+        <LinearLayout
+            android:id="@+id/ll_startrecord"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/mv_start_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mv_start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mvpreview_startrecord"
+                android:textColor="@color/white"
+                android:textSize="@dimen/typesize_g" />
+        </LinearLayout>
+
+        <!--模板、滤镜-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_alignBottom="@id/ll_startrecord">
+
+            <LinearLayout
+                android:id="@+id/ll_templatebg"
+                android:layout_width="167dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_mvpreview_template">
+
+                <TextView
+                    android:id="@+id/tv_template"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:paddingLeft="25dp"
+                    android:text="@string/mvpreview_template"
+                    android:textColor="@drawable/selector_tvcolor_mvpreview" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_filterbg"
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/selector_mvpreview_filter">
+
+                <TextView
+                    android:id="@+id/tv_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:paddingRight="25dp"
+                    android:text="@string/mvpreview_filter"
+                    android:textColor="@drawable/selector_tvcolor_mvpreview" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_template"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</LinearLayout>

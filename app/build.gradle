@@ -1,0 +1,203 @@
+apply plugin: 'com.android.application'
+apply from: '../MobSDK.gradle'
+
+android {
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "nano.karaok"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+
+        multiDexEnabled true
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "a3aff25442a0dec0cf0a69c3", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'ktv'
+            keyPassword 'snsktv'
+            storeFile file('../upload_karaok.jks')
+            storePassword 'snsktv'
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "COGNITO_POOL_ID", "\"us-west-2:afd31b6a-a064-4fb3-99d0-437065c98e23\""
+            buildConfigField "String", "COGNITO_POOL_REGION", "\"us-west-2\""
+            buildConfigField "String", "BUCKET_NAME", "\"karaok-us-west-2\""
+            buildConfigField "String", "BUCKET_REGION", "\"us-west-2\""
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "String", "APP_DOMAIN", "\"http://app.karaok1.com:18080/\""
+            buildConfigField "String", "APP_DOMAIN_File", "\"https://s3-us-west-2.amazonaws.com/karaok-us-west-2/\""
+            buildConfigField "String", "LINK_PROTOCOL", "\"http://www.nano-com.jp/karaok/policy/terms.html\""
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "String", "COGNITO_POOL_ID", "\"us-west-2:afd31b6a-a064-4fb3-99d0-437065c98e23\""
+            buildConfigField "String", "COGNITO_POOL_REGION", "\"us-west-2\""
+            buildConfigField "String", "BUCKET_NAME", "\"karaok-us-west-2\""
+            buildConfigField "String", "BUCKET_REGION", "\"us-west-2\""
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "String", "APP_DOMAIN", "\"http://app.karaok1.com:18080/\""
+            buildConfigField "String", "APP_DOMAIN_File", "\"https://s3-us-west-2.amazonaws.com/karaok-us-west-2/\""
+            buildConfigField "String", "LINK_PROTOCOL", "\"http://www.nano-com.jp/karaok/policy/terms.html\""
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    buildTypes {
+//        debug {
+//            buildConfigField "boolean", "LOG_DEBUG", "true"
+//            buildConfigField "boolean", "USE_CANARY", "true"
+//            buildConfigField "String", "APP_DOMAIN", "\"http://123.56.226.246:18080/\""
+//            buildConfigField "String", "APP_DOMAIN_File", "\"http://123.56.226.246:18080/user/app/file/getFile?filename=\""
+//            minifyEnabled false
+//            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//
+//        release {
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            buildConfigField "boolean", "USE_CANARY", "false"
+//            buildConfigField "String", "APP_DOMAIN", "\"http://123.56.226.246:18080/\""
+//            buildConfigField "String", "APP_DOMAIN_File", "\"http://123.56.226.246:18080/user/app/file/getFile?filename=\""
+//            minifyEnabled false
+//            shrinkResources false
+//            zipAlignEnabled false
+//            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "snsktv_${defaultConfig.versionName}_${defaultConfig.versionCode}.apk"
+        }
+    }
+
+    //加快编译
+    dexOptions {
+        dexInProcess true
+        preDexLibraries true
+        javaMaxHeapSize "4g"//越大越好
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.1.0'
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation rootProject.ext.dependencies["junit"]
+
+    implementation project(':arms')
+    implementation project(':multimedia')
+
+    compileOnly rootProject.ext.dependencies["javax.annotation"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    implementation rootProject.ext.dependencies["dagger2"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    implementation rootProject.ext.dependencies["paginate"]
+    implementation rootProject.ext.dependencies["flycodialog"]
+    implementation rootProject.ext.dependencies["wheelpicker"]
+    implementation rootProject.ext.dependencies["okgo"]
+    implementation rootProject.ext.dependencies["pickerview"]
+    implementation rootProject.ext.dependencies["swiperecyclerview"]
+    implementation rootProject.ext.dependencies["bugly"]
+    implementation rootProject.ext.dependencies["buglynative"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["materialish"]
+    implementation rootProject.ext.dependencies["laybelLayout"]
+    implementation rootProject.ext.dependencies["blurredview"]
+    implementation rootProject.ext.dependencies["bgabanner"]
+    implementation rootProject.ext.dependencies["aws-s3"]
+    implementation rootProject.ext.dependencies["jpinyin"]
+    implementation rootProject.ext.dependencies["imagepicker"]
+    implementation rootProject.ext.dependencies["jiguang-jpush"]
+    implementation rootProject.ext.dependencies["jiguang-jcore"]
+    implementation rootProject.ext.dependencies["badgeview"]
+    annotationProcessor rootProject.ext.dependencies["badgeview-compiler"]
+
+    implementation(name: 'refreshlayout', ext: 'aar')
+
+
+}

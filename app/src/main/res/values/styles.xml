@@ -1,0 +1,115 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--ToolBar-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏（5.0以上）-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--控件选中的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--界面背景-->
+        <item name="android:windowBackground">@color/colorWindowBg</item>
+        <!--主体文字颜色-->
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+    </style>
+
+    <!--MessageFragment带角标的TextView-->
+    <style name="Msg_BGATextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">@dimen/gapsize_d</item>
+        <item name="android:paddingBottom">@dimen/gapsize_d</item>
+        <item name="android:paddingTop">@dimen/gapsize_b</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/typesize_d</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--网络进度框-->
+    <style name="NetworkDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <!--SelectDialog：对话框的进入和退出动画-->
+    <style name="Selectdialog_AnimStyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
+
+    <!--RadioButton-->
+    <style name="RadioButton_ButtonNull">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/typesize_c</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--等分的RadioButton-->
+    <style name="RadioButton_Divide" parent="RadioButton_ButtonNull">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/gapsize_d</item>
+    </style>
+
+    <!--固定大小的RadioButton-->
+    <style name="RadioButton_FixedSize" parent="RadioButton_ButtonNull">
+        <item name="android:layout_width">@dimen/RButton_FixedSizeWidth</item>
+        <item name="android:layout_height">@dimen/RButton_FixedSizeHeight</item>
+    </style>
+
+    <!--RadioButton:底部下划线是蓝白色，字体是蓝灰色切换-->
+    <style name="RadioButton_FixedSize.BlueWihteUnderline" parent="RadioButton_FixedSize">
+        <item name="android:drawableBottom">@drawable/selector_richlist_choose</item>
+        <item name="android:textColor">@drawable/selector_tvcolor_accompaniment</item>
+    </style>
+
+    <!--LearnSingActivity的RadioButton-->
+    <style name="RadioButton_FixedSize.LearnSing" parent="RadioButton_FixedSize">
+        <item name="android:layout_width">@dimen/learnsing_rgbt_bt_w</item>
+        <item name="android:layout_height">@dimen/learnsing_rgbt_bt_h</item>
+        <item name="android:layout_margin">@dimen/gapsize_g</item>
+        <item name="android:textColor">@drawable/selector_tvcolor_mainrb</item>
+    </style>
+
+    <!--RatingBar五角星评分-->
+    <style name="Grade_RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/layer_ratingbar</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+
+    <!--城市选择侧边栏-->
+    <style name="LetterIndexTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/gapsize_b</item>
+        <item name="android:paddingRight">@dimen/discover_side_letter_bar_width</item>
+        <item name="android:paddingTop">@dimen/gapsize_e</item>
+        <item name="android:paddingBottom">@dimen/gapsize_e</item>
+        <item name="android:textSize">@dimen/typesize_b</item>
+        <item name="android:textColor">@color/cp_gray</item>
+    </style>
+
+    <!--输入框的样式：EditText-->
+
+    <!--选择图片的对话框样式-->
+    <style name="SelectDialog_Transparent" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+
+    <!--打分结果的RatingBar-->
+    <style name="RatingBar_Score" parent="@android:style/Widget.RatingBar">
+        <item name="android:isIndicator">true</item>
+        <item name="android:progressDrawable">@drawable/progress_score_trill</item>
+        <item name="android:minHeight">25dp</item>
+    </style>
+</resources>

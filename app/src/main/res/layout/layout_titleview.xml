@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_size"
+    android:background="@color/titlebar_bg"
+    android:gravity="center_vertical">
+
+    <!--标题左边-->
+    <FrameLayout
+        android:id="@+id/flleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/gapsize_b"
+        android:paddingRight="@dimen/gapsize_d">
+
+        <ImageView
+            android:id="@+id/ivleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_left"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边文字"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <!--标题右边-->
+    <FrameLayout
+        android:id="@+id/flright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/gapsize_d"
+        android:paddingRight="@dimen/gapsize_b">
+
+        <ImageView
+            android:id="@+id/ivright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@mipmap/search_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="右边文字"
+            android:textColor="@color/white"
+            android:textSize="@dimen/typesize_c"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!--标题中间-->
+    <TextView
+        android:id="@+id/tvmiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:text="标题名称"
+        android:textColor="@color/white"
+        android:textSize="@dimen/typesize_b" />
+</com.zhy.autolayout.AutoRelativeLayout>
